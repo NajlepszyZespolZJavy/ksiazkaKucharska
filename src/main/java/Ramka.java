@@ -12,8 +12,8 @@ public class Ramka extends JFrame {
         setLayout(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-//        Panel panel = new Panel();
-//        add(panel);
+        Panel panel = new Panel();
+        add(panel);
         setVisible(true);
     }
 }
