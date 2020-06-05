@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 import javax.swing.JPanel;
 import javax.swing.JLabel;
 import javax.swing.JButton;
@@ -17,6 +19,17 @@ public class Panel extends JPanel implements ActionListener, KeyListener {
 
     private JButton przyciskLewo;
     private JButton przyciskPrawo;
+
+    private Przepis aktualnyPrzepis;
+    private List <Przepis> listaPrzepisow;
+    private int indeks = 0;
+
+    private JLabel tytul;
+    private JLabel grafika;
+    private JLabel czasWykonania;
+    private JLabel trudnoscWykonania;
+    private JLabel skladniki;
+    private JLabel instrukcje;
 
     public Panel() {
 
@@ -49,10 +62,13 @@ public class Panel extends JPanel implements ActionListener, KeyListener {
         przyciskPrawo.addKeyListener(this);
         tlo.add(przyciskPrawo);
 
-        PrzykladowyPrzepis aktualnyPrzepis = new PrzykladowyPrzepis();
+        listaPrzepisow = new ArrayList<Przepis>();
+        listaPrzepisow.add(new PrzykladowyPrzepis());
+        listaPrzepisow.add(new PrzykladowyPrzepis2());
+        aktualnyPrzepis = listaPrzepisow.get(indeks); // indeks = 0
 
         // tytuł przepisu
-        JLabel tytul = new JLabel();
+        tytul = new JLabel();
         tytul.setBounds(0,0,600,50);
         tytul.setText(aktualnyPrzepis.getTytul());
         tytul.setFont(new Font(Font.SERIF, Font.BOLD,30));
@@ -61,13 +77,13 @@ public class Panel extends JPanel implements ActionListener, KeyListener {
         tlo.add(tytul);
 
         // grafika przepisu
-        JLabel grafika = new JLabel();
+        grafika = new JLabel();
         grafika.setBounds(5, 50, 600, 200);
         grafika.setIcon(new ImageIcon(aktualnyPrzepis.getSciezkaGrafiki()));
         tlo.add(grafika);
 
         // czas wykonania
-        JLabel czasWykonania = new JLabel();
+        czasWykonania = new JLabel();
         czasWykonania.setBounds(10,260,600,40);
         czasWykonania.setFont(new Font(Font.SERIF, Font.PLAIN,20));
         czasWykonania.setVerticalAlignment(SwingConstants.TOP);
@@ -75,7 +91,7 @@ public class Panel extends JPanel implements ActionListener, KeyListener {
         tlo.add(czasWykonania);
 
         // trudność wykonania
-        JLabel trudnoscWykonania = new JLabel();
+        trudnoscWykonania = new JLabel();
         trudnoscWykonania.setBounds(10,300,600,40);
         trudnoscWykonania.setFont(new Font(Font.SERIF, Font.PLAIN,20));
         trudnoscWykonania.setVerticalAlignment(SwingConstants.TOP);
@@ -83,7 +99,7 @@ public class Panel extends JPanel implements ActionListener, KeyListener {
         tlo.add(trudnoscWykonania);
 
         // składniki
-        JLabel skladniki = new JLabel();
+        skladniki = new JLabel();
         skladniki.setBounds(10,350,600,550);
         skladniki.setFont(new Font(Font.SERIF, Font.PLAIN,20));
         skladniki.setVerticalAlignment(SwingConstants.TOP);
@@ -91,7 +107,7 @@ public class Panel extends JPanel implements ActionListener, KeyListener {
         tlo.add(skladniki);
 
         // instrukcje
-        JLabel instrukcje = new JLabel();
+        instrukcje = new JLabel();
         instrukcje.setBounds(610,10,600,800);
         instrukcje.setFont(new Font(Font.SERIF, Font.PLAIN,20));
         instrukcje.setVerticalAlignment(SwingConstants.TOP);
@@ -102,16 +118,56 @@ public class Panel extends JPanel implements ActionListener, KeyListener {
         setVisible(true);
     }
 
+    private void poprzedniPrzepis() {
+
+        // zmienia przepis na poprzedni
+        indeks--;
+        if (indeks < 0)
+            indeks = listaPrzepisow.size() - 1;
+
+        // aktualizuje bieżący przepis
+        aktualnyPrzepis = listaPrzepisow.get(indeks);
+
+        // aktualizuje zawartość komponentów Panelu
+        tytul.setText(aktualnyPrzepis.getTytul());
+        grafika.setText(aktualnyPrzepis.getSciezkaGrafiki());
+        czasWykonania.setText(aktualnyPrzepis.getCzasWykonania());
+        trudnoscWykonania.setText(aktualnyPrzepis.getTrudnoscWykonania());
+        skladniki.setText(aktualnyPrzepis.getSkladniki());
+        instrukcje.setText(aktualnyPrzepis.getInstrukcje());
+    }
+
+    private void nastepnyPrzepis() {
+
+        // zmienia przepis na następny
+        indeks++;
+        if (indeks > listaPrzepisow.size() - 1)
+            indeks = 0;
+
+        // aktualizuje bieżący przepis
+        aktualnyPrzepis = listaPrzepisow.get(indeks);
+
+        // aktualizuje zawartość komponentów Panelu
+        tytul.setText(aktualnyPrzepis.getTytul());
+        grafika.setText(aktualnyPrzepis.getSciezkaGrafiki());
+        czasWykonania.setText(aktualnyPrzepis.getCzasWykonania());
+        trudnoscWykonania.setText(aktualnyPrzepis.getTrudnoscWykonania());
+        skladniki.setText(aktualnyPrzepis.getSkladniki());
+        instrukcje.setText(aktualnyPrzepis.getInstrukcje());
+    }
+
     @Override
     public void actionPerformed(ActionEvent e) {
         Object source = e.getSource();
 
         if (source == przyciskLewo) {
             System.out.println("Naciśnięto lewy przycisk!");
+            poprzedniPrzepis();
         }
 
         else if (source == przyciskPrawo) {
             System.out.println("Naciśnięto prawy przycisk!");
+            nastepnyPrzepis();
         }
     }
 
@@ -121,9 +177,11 @@ public class Panel extends JPanel implements ActionListener, KeyListener {
 
         if (key == KeyEvent.VK_LEFT) {
             System.out.println("Naciśnięto strzałkę w lewo!");
+            poprzedniPrzepis();
         }
         else if (key == KeyEvent.VK_RIGHT) {
             System.out.println("Naciśnięto strzałkę w prawo!");
+            nastepnyPrzepis();
         }
     }
 
