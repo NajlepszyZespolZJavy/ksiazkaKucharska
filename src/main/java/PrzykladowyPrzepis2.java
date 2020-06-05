@@ -1,4 +1,4 @@
-public class PrzykladowyPrzepis2 {
+public class PrzykladowyPrzepis2 extends Przepis {
 
     String tytul = "Nazwa drugiego przepisu";
     String sciezkaGrafiki = "src\\main\\java\\grafiki\\przepis2.jpg";
