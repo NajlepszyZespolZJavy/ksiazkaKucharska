@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
 import javax.swing.JPanel;
 import javax.swing.JLabel;
 import javax.swing.JButton;
@@ -21,8 +19,7 @@ public class Panel extends JPanel implements ActionListener, KeyListener {
     private JButton przyciskPrawo;
 
     private Przepis aktualnyPrzepis;
-    private List <Przepis> listaPrzepisow;
-    private int indeks = 0;
+    private IteratorPrzepisow iterator;
 
     private JLabel tytul;
     private JLabel grafika;
@@ -62,10 +59,9 @@ public class Panel extends JPanel implements ActionListener, KeyListener {
         przyciskPrawo.addKeyListener(this);
         tlo.add(przyciskPrawo);
 
-        listaPrzepisow = new ArrayList<Przepis>();
-        listaPrzepisow.add(new PrzykladowyPrzepis());
-        listaPrzepisow.add(new PrzykladowyPrzepis2());
-        aktualnyPrzepis = listaPrzepisow.get(indeks); // indeks = 0
+        AgregatPrzepisow agregat = new AgregatPrzepisow();
+        iterator = agregat.iterator();
+        aktualnyPrzepis = iterator.aktualnyPrzepis();
 
         // tytuł przepisu
         tytul = new JLabel();
@@ -120,13 +116,9 @@ public class Panel extends JPanel implements ActionListener, KeyListener {
 
     private void poprzedniPrzepis() {
 
-        // zmienia przepis na poprzedni
-        indeks--;
-        if (indeks < 0)
-            indeks = listaPrzepisow.size() - 1;
-
         // aktualizuje bieżący przepis
-        aktualnyPrzepis = listaPrzepisow.get(indeks);
+        iterator.poprzedni();
+        aktualnyPrzepis = iterator.aktualnyPrzepis();
 
         // aktualizuje zawartość komponentów Panelu
         tytul.setText(aktualnyPrzepis.getTytul());
@@ -139,13 +131,9 @@ public class Panel extends JPanel implements ActionListener, KeyListener {
 
     private void nastepnyPrzepis() {
 
-        // zmienia przepis na następny
-        indeks++;
-        if (indeks > listaPrzepisow.size() - 1)
-            indeks = 0;
-
         // aktualizuje bieżący przepis
-        aktualnyPrzepis = listaPrzepisow.get(indeks);
+        iterator.nastepny();
+        aktualnyPrzepis = iterator.aktualnyPrzepis();
 
         // aktualizuje zawartość komponentów Panelu
         tytul.setText(aktualnyPrzepis.getTytul());
