@@ -13,4 +13,8 @@ public class AgregatPrzepisow {
     public List <Przepis> getListaPrzepisow() {
         return listaPrzepisow;
     }
+
+    public IteratorPrzepisow iterator() {
+        return new IteratorPrzepisow(getListaPrzepisow());
+    }
 }
