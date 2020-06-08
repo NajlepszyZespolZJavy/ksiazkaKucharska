@@ -35,15 +35,15 @@ public class Panel extends JPanel implements ActionListener, KeyListener {
         JLabel tlo = new JLabel();
         tlo.setBounds(0, 0, WIDTH, HEIGHT);
         setBackground(Color.LIGHT_GRAY);
-//        ImageIcon tlo_grafika = new ImageIcon("src\\main\\java\\grafiki\\tlo.jpg");
-//        tlo.setIcon(tlo_grafika);
+        ImageIcon tlo_grafika = new ImageIcon("src\\main\\java\\grafiki\\tlo.jpg");
+        tlo.setIcon(tlo_grafika);
         setLayout(null);
 
         // strzałka w lewo
         przyciskLewo = new JButton();
         przyciskLewo.setBounds(25, 650, 100, 100);
-//        ImageIcon przyciskLewoGrafika = new ImageIcon("src\\main\\java\\grafiki\\przycisk_lewo.png");
-//        przyciskLewo.setIcon(przyciskLewoGrafika);
+        ImageIcon przyciskLewoGrafika = new ImageIcon("src\\main\\java\\grafiki\\lewo.png");
+        przyciskLewo.setIcon(przyciskLewoGrafika);
         przyciskLewo.setContentAreaFilled(true);
         przyciskLewo.addActionListener(this);
         przyciskLewo.addKeyListener(this);
@@ -52,8 +52,8 @@ public class Panel extends JPanel implements ActionListener, KeyListener {
         // strzałka w prawo
         przyciskPrawo = new JButton();
         przyciskPrawo.setBounds(1075, 650, 100, 100);
-//        ImageIcon przyciskPrawoGrafika = new ImageIcon("src\\main\\java\\grafiki\\przycisk_prawo.png");
-//        przyciskPrawo.setIcon(przyciskPrawoGrafika);
+        ImageIcon przyciskPrawoGrafika = new ImageIcon("src\\main\\java\\grafiki\\prawo.png");
+        przyciskPrawo.setIcon(przyciskPrawoGrafika);
         przyciskPrawo.setContentAreaFilled(true);
         przyciskPrawo.addActionListener(this);
         przyciskPrawo.addKeyListener(this);
