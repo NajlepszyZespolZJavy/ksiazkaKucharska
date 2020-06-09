@@ -1,6 +1,7 @@
 import javax.swing.JPanel;
 import javax.swing.JLabel;
 import javax.swing.JButton;
+import javax.swing.JTextField;
 import javax.swing.ImageIcon;
 import javax.swing.SwingConstants;
 import java.awt.Color;
@@ -20,6 +21,8 @@ public class Panel extends JPanel implements ActionListener, KeyListener {
 
     private Przepis aktualnyPrzepis;
     private IteratorPrzepisow iterator;
+
+    JTextField poleWyszukiwania;
 
     private JLabel tytul;
     private JLabel grafika;
@@ -62,6 +65,12 @@ public class Panel extends JPanel implements ActionListener, KeyListener {
         AgregatPrzepisow agregat = new AgregatPrzepisow();
         iterator = agregat.iterator();
         aktualnyPrzepis = iterator.aktualnyPrzepis();
+
+        //pole wyszukiwania przepisów
+        poleWyszukiwania = new JTextField("Przepis którego szukam to: ");
+        poleWyszukiwania.setBounds(400, 700, 400,40);
+        poleWyszukiwania.addKeyListener(this);
+        tlo.add(poleWyszukiwania);
 
         // tytuł przepisu
         tytul = new JLabel();
@@ -170,6 +179,11 @@ public class Panel extends JPanel implements ActionListener, KeyListener {
         else if (key == KeyEvent.VK_RIGHT) {
             System.out.println("Naciśnięto strzałkę w prawo!");
             nastepnyPrzepis();
+        }
+        else if (key == KeyEvent.VK_ENTER) {
+            System.out.println("Naciśnięto ENTER!");
+            String trescWyszukania = poleWyszukiwania.getText();
+            System.out.println("Wpisano: " + trescWyszukania);
         }
     }
 
