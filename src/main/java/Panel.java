@@ -1,15 +1,15 @@
-import javax.swing.JPanel;
-import javax.swing.JLabel;
-import javax.swing.JButton;
-import javax.swing.JTextField;
-import javax.swing.ImageIcon;
-import javax.swing.SwingConstants;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
 
 public class Panel extends JPanel implements ActionListener, KeyListener {
 
@@ -22,7 +22,7 @@ public class Panel extends JPanel implements ActionListener, KeyListener {
     private Przepis aktualnyPrzepis;
     private IteratorPrzepisow iterator;
 
-    JTextField poleWyszukiwania;
+    private JTextField poleWyszukiwania;
 
     private JLabel tytul;
     private JLabel grafika;
@@ -38,15 +38,13 @@ public class Panel extends JPanel implements ActionListener, KeyListener {
         JLabel tlo = new JLabel();
         tlo.setBounds(0, 0, WIDTH, HEIGHT);
         setBackground(Color.LIGHT_GRAY);
-        ImageIcon tlo_grafika = new ImageIcon("src\\main\\java\\grafiki\\tlo.jpg");
-        tlo.setIcon(tlo_grafika);
+        tlo.setIcon(new ImageIcon("src\\main\\java\\grafiki\\tlo.jpg"));
         setLayout(null);
 
         // strzałka w lewo
         przyciskLewo = new JButton();
         przyciskLewo.setBounds(25, 650, 100, 100);
-        ImageIcon przyciskLewoGrafika = new ImageIcon("src\\main\\java\\grafiki\\lewo.png");
-        przyciskLewo.setIcon(przyciskLewoGrafika);
+        przyciskLewo.setIcon(new ImageIcon("src\\main\\java\\grafiki\\lewo.png"));
         przyciskLewo.setContentAreaFilled(true);
         przyciskLewo.addActionListener(this);
         przyciskLewo.addKeyListener(this);
@@ -55,8 +53,7 @@ public class Panel extends JPanel implements ActionListener, KeyListener {
         // strzałka w prawo
         przyciskPrawo = new JButton();
         przyciskPrawo.setBounds(1075, 650, 100, 100);
-        ImageIcon przyciskPrawoGrafika = new ImageIcon("src\\main\\java\\grafiki\\prawo.png");
-        przyciskPrawo.setIcon(przyciskPrawoGrafika);
+        przyciskPrawo.setIcon(new ImageIcon("src\\main\\java\\grafiki\\prawo.png"));
         przyciskPrawo.setContentAreaFilled(true);
         przyciskPrawo.addActionListener(this);
         przyciskPrawo.addKeyListener(this);
