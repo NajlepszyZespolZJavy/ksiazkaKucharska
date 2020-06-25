@@ -1,3 +1,6 @@
+/**
+ * Klasa wirtualna z której dziedziczą poszczególe przepisy i nadpisują jej metody
+ */
 public abstract class Przepis {
 
     protected String tytul;
