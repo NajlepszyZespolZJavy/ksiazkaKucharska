@@ -19,7 +19,6 @@ import javax.swing.SwingConstants;
  * Metody te pozwalają na zmianę przepisu w zależności od tego który z przycisków lub która
  * ze strzałek została naciśnięta.
  */
-
 public class Panel extends JPanel implements ActionListener, KeyListener {
 
     public static final int WIDTH = 1200;
@@ -45,7 +44,6 @@ public class Panel extends JPanel implements ActionListener, KeyListener {
      * pozwalają na zmianę aktualnie wyświetlanego przepisu. Ponadto zmiana wyświetlanego przepisu możliwa jest
      * również przy użyciu strzałek na klawiaturze.
      */
-
     public Panel() {
 
         // stworzenie panelu
@@ -138,7 +136,6 @@ public class Panel extends JPanel implements ActionListener, KeyListener {
     /**
      * Zmienia aktualnie ustawiony Przepis na poprzedni w Agregacie przy pomocy Iteratora.
      */
-
     private void poprzedniPrzepis() {
 
         // aktualizuje bieżący przepis
@@ -157,7 +154,6 @@ public class Panel extends JPanel implements ActionListener, KeyListener {
     /**
      * Zmienia aktualnie ustawiony Przepis na następny w Agregacie przy pomocy Iteratora.
      */
-
     private void nastepnyPrzepis() {
 
         // aktualizuje bieżący przepis
@@ -178,7 +174,6 @@ public class Panel extends JPanel implements ActionListener, KeyListener {
      * porównuje z referencjami przycisków. Jeśli któryś z warunków został spełniony to
      * podejmuje odpowiednią akcje.
      */
-
     @Override
     public void actionPerformed(ActionEvent e) {
         Object source = e.getSource();
@@ -199,7 +194,6 @@ public class Panel extends JPanel implements ActionListener, KeyListener {
      * naciśnięty przycisk jest strzałką w lewo lub prawo. Jeśli tak to podejmuje
      * odpowiednią akcje.
      */
-
     @Override
     public void keyReleased(KeyEvent evt) {
         int key = evt.getKeyCode();
