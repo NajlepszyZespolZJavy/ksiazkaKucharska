@@ -1,3 +1,6 @@
+/**
+ * Klasa przykladowego przepisu. Dziedziczy z Przepisu i nadpisuje wszystkie jego metody
+ */
 public class PrzykladowyPrzepis2 extends Przepis {
 
     String tytul = "Nazwa drugiego przepisu";
