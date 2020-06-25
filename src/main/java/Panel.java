@@ -11,6 +11,14 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
+/**
+ * Klasa odpowiada za panel. Pokrywa się on z rozmiarem ramki. Domyślnie wyświetla pierwszy
+ * dostępny przepis. Panel jest słuchaczem: będzie powiadamiany za każdym razem gdy zostanie
+ * wciśnięty jeden z przycisków za pomocą myszy lub użyta zostanie klawiatura; wywoła wtedy
+ * odpowiednio metodę actionPerformed() (dla myszy) lub keyReleased() (dla klawiatury).
+ * Metody te pozwalają na zmianę przepisu w zależności od tego który z przycisków lub która
+ * ze strzałek została naciśnięta.
+ */
 public class Panel extends JPanel implements ActionListener, KeyListener {
 
     public static final int WIDTH = 1200;
@@ -31,6 +39,11 @@ public class Panel extends JPanel implements ActionListener, KeyListener {
     private JLabel skladniki;
     private JLabel instrukcje;
 
+    /**
+     * Konstruktor domyślny: tworzy tło, oraz niezbędnę komponenty i wczytuje dane pierwszego przepisu. Przyciski
+     * pozwalają na zmianę aktualnie wyświetlanego przepisu. Ponadto zmiana wyświetlanego przepisu możliwa jest
+     * również przy użyciu strzałek na klawiaturze.
+     */
     public Panel() {
 
         // stworzenie panelu
@@ -120,6 +133,9 @@ public class Panel extends JPanel implements ActionListener, KeyListener {
         setVisible(true);
     }
 
+    /**
+     * Zmienia aktualnie ustawiony Przepis na poprzedni w Agregacie przy pomocy Iteratora.
+     */
     private void poprzedniPrzepis() {
 
         // aktualizuje bieżący przepis
@@ -135,6 +151,9 @@ public class Panel extends JPanel implements ActionListener, KeyListener {
         instrukcje.setText(aktualnyPrzepis.getInstrukcje());
     }
 
+    /**
+     * Zmienia aktualnie ustawiony Przepis na następny w Agregacie przy pomocy Iteratora.
+     */
     private void nastepnyPrzepis() {
 
         // aktualizuje bieżący przepis
@@ -150,6 +169,11 @@ public class Panel extends JPanel implements ActionListener, KeyListener {
         instrukcje.setText(aktualnyPrzepis.getInstrukcje());
     }
 
+    /**
+     * Wywoływana gdy nastąpi zdarzeneie zwiazane z myszą. Pobiera źródło zdarzenia i
+     * porównuje z referencjami przycisków. Jeśli któryś z warunków został spełniony to
+     * podejmuje odpowiednią akcje.
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         Object source = e.getSource();
@@ -165,6 +189,11 @@ public class Panel extends JPanel implements ActionListener, KeyListener {
         }
     }
 
+    /**
+     * Wywoływana gdy puścimy wciśnięty uprzednio przycisk na klawiaturze. Sprawdza czy
+     * naciśnięty przycisk jest strzałką w lewo lub prawo. Jeśli tak to podejmuje
+     * odpowiednią akcje.
+     */
     @Override
     public void keyReleased(KeyEvent evt) {
         int key = evt.getKeyCode();
