@@ -138,17 +138,12 @@ public class Panel extends JPanel implements ActionListener, KeyListener {
      */
     private void poprzedniPrzepis() {
 
-        // aktualizuje bieżący przepis
+        // zmienia przepis na poprzedni
         iterator.poprzedni();
         aktualnyPrzepis = iterator.aktualnyPrzepis();
 
         // aktualizuje zawartość komponentów Panelu
-        tytul.setText(aktualnyPrzepis.getTytul());
-        grafika.setIcon(new ImageIcon(aktualnyPrzepis.getSciezkaGrafiki()));
-        czasWykonania.setText(aktualnyPrzepis.getCzasWykonania());
-        trudnoscWykonania.setText(aktualnyPrzepis.getTrudnoscWykonania());
-        skladniki.setText(aktualnyPrzepis.getSkladniki());
-        instrukcje.setText(aktualnyPrzepis.getInstrukcje());
+        wyswietlPrzepis();
     }
 
     /**
@@ -156,11 +151,19 @@ public class Panel extends JPanel implements ActionListener, KeyListener {
      */
     private void nastepnyPrzepis() {
 
-        // aktualizuje bieżący przepis
+        // zmiania przepis na następny
         iterator.nastepny();
         aktualnyPrzepis = iterator.aktualnyPrzepis();
 
         // aktualizuje zawartość komponentów Panelu
+        wyswietlPrzepis();
+    }
+
+    /**
+     * Aktualizuje wyświetlane dane o przepisie.
+     */
+    private void wyswietlPrzepis() {
+
         tytul.setText(aktualnyPrzepis.getTytul());
         grafika.setIcon(new ImageIcon(aktualnyPrzepis.getSciezkaGrafiki()));
         czasWykonania.setText(aktualnyPrzepis.getCzasWykonania());
@@ -208,8 +211,12 @@ public class Panel extends JPanel implements ActionListener, KeyListener {
         }
         else if (key == KeyEvent.VK_ENTER) {
             System.out.println("Naciśnięto ENTER!");
-            String trescWyszukania = poleWyszukiwania.getText();
-            System.out.println("Wpisano: " + trescWyszukania);
+            System.out.println("Wpisano: " + poleWyszukiwania.getText());
+
+            iterator.szukajPrzepisu(poleWyszukiwania.getText());
+            aktualnyPrzepis = iterator.aktualnyPrzepis();
+
+            wyswietlPrzepis();
         }
     }
 
