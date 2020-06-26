@@ -16,6 +16,8 @@ public class AgregatPrzepisow {
         listaPrzepisow.add(new PrzykladowyPrzepis2());
         listaPrzepisow.add(new Szarlotka());
         listaPrzepisow.add(new Spaghetti());
+        listaPrzepisow.add(new KremDyniowy());
+
     }
 
     /**
