@@ -1,5 +1,5 @@
 /**
- * Klasa KremDyniowy. Dziedziczy z Przepisu i nadpisuje wszystkie jego metody
+ * Klasa PierogiRuskie. Dziedziczy z Przepisu i nadpisuje wszystkie jego metody
  */
 public class PierogiRuskie extends Przepis {
 
