@@ -19,6 +19,7 @@ public class AgregatPrzepisow {
         listaPrzepisow.add(new KremDyniowy());
         listaPrzepisow.add(new PierogiRuskie());
         listaPrzepisow.add(new KurczakWZiołach());
+        listaPrzepisow.add(new Tatar());
 
     }
 
