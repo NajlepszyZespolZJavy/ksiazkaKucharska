@@ -36,4 +36,17 @@ public class IteratorPrzepisow {
         if(indeks > listaPrzepisow.size() - 1)
             indeks = 0;
     }
+
+    /**
+     * Iteruje raz po liście przepisów szukając takiego o podanej nazwie.
+     */
+    public void szukajPrzepisu(String szukanaNazwa) {
+        for (int i = 0; i < listaPrzepisow.size(); i++) {
+            nastepny();
+            if (aktualnyPrzepis().getTytul().toLowerCase().contains(szukanaNazwa.toLowerCase())) {
+                System.out.println("Znalazłem!");
+                break;
+            }
+        }
+    }
 }
