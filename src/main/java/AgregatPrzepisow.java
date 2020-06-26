@@ -18,6 +18,7 @@ public class AgregatPrzepisow {
         listaPrzepisow.add(new Spaghetti());
         listaPrzepisow.add(new KremDyniowy());
         listaPrzepisow.add(new PierogiRuskie());
+        listaPrzepisow.add(new KurczakWZiołach());
 
     }
 
