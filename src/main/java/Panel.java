@@ -144,7 +144,7 @@ public class Panel extends JPanel implements ActionListener, KeyListener {
 
         // aktualizuje zawartość komponentów Panelu
         tytul.setText(aktualnyPrzepis.getTytul());
-        grafika.setText(aktualnyPrzepis.getSciezkaGrafiki());
+        grafika.setIcon(new ImageIcon(aktualnyPrzepis.getSciezkaGrafiki()));
         czasWykonania.setText(aktualnyPrzepis.getCzasWykonania());
         trudnoscWykonania.setText(aktualnyPrzepis.getTrudnoscWykonania());
         skladniki.setText(aktualnyPrzepis.getSkladniki());
@@ -162,7 +162,7 @@ public class Panel extends JPanel implements ActionListener, KeyListener {
 
         // aktualizuje zawartość komponentów Panelu
         tytul.setText(aktualnyPrzepis.getTytul());
-        grafika.setText(aktualnyPrzepis.getSciezkaGrafiki());
+        grafika.setIcon(new ImageIcon(aktualnyPrzepis.getSciezkaGrafiki()));
         czasWykonania.setText(aktualnyPrzepis.getCzasWykonania());
         trudnoscWykonania.setText(aktualnyPrzepis.getTrudnoscWykonania());
         skladniki.setText(aktualnyPrzepis.getSkladniki());
