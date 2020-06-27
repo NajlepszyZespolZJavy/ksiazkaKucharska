@@ -14,6 +14,7 @@ public class AgregatPrzepisow {
     public AgregatPrzepisow() {
         listaPrzepisow.add(new PrzykladowyPrzepis());
         listaPrzepisow.add(new PrzykladowyPrzepis2());
+        listaPrzepisow.add(new Lasagne());
     }
 
     /**
