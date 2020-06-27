@@ -17,6 +17,7 @@ public class AgregatPrzepisow {
         listaPrzepisow.add(new Lasagne());
         listaPrzepisow.add(new PureeWarzywne());
         listaPrzepisow.add(new SorbetTruskawkowy());
+        listaPrzepisow.add(new TartaJablkowa());
     }
 
     /**
