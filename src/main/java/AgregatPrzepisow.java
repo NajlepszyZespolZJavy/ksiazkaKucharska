@@ -16,6 +16,7 @@ public class AgregatPrzepisow {
         listaPrzepisow.add(new PrzykladowyPrzepis2());
         listaPrzepisow.add(new Lasagne());
         listaPrzepisow.add(new PureeWarzywne());
+        listaPrzepisow.add(new SorbetTruskawkowy());
     }
 
     /**
