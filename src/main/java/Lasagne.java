@@ -4,7 +4,7 @@
 public class Lasagne extends Przepis {
 
     String tytul = "Lasagne";
-    String sciezkaGrafiki = "src\\main\\java\\grafiki\\Lasagne.jpg";
+    String sciezkaGrafiki = "src/main/java/grafiki/Lasagne.jpg";
     String czasWykonania = "Czas wykonania: 150 minut";
     String trudnoscWykonania = "Trudność wykonania: średnia";
     String skladniki = "<html>Składniki:<br>" +

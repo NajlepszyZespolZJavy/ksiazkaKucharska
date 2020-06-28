@@ -4,7 +4,7 @@
 public class PureeWarzywne extends Przepis {
 
     String tytul = "Puree Warzywne";
-    String sciezkaGrafiki = "src\\main\\java\\grafiki\\PureeWarzywne.jpg";
+    String sciezkaGrafiki = "src/main/java/grafiki/PureeWarzywne.jpg";
     String czasWykonania = "Czas wykonania: 25 minut";
     String trudnoscWykonania = "Trudność wykonania: łatwa";
     String skladniki = "<html>Składniki:<br>" +

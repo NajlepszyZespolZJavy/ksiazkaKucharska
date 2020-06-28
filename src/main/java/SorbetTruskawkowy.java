@@ -4,7 +4,7 @@
 public class SorbetTruskawkowy extends Przepis {
 
     String tytul = "Sorbet Truskawkowy";
-    String sciezkaGrafiki = "src\\main\\java\\grafiki\\SorbetTruskawkowy.jpg";
+    String sciezkaGrafiki = "src/main/java/grafiki/SorbetTruskawkowy.jpg";
     String czasWykonania = "Czas wykonania: 10 minut";
     String trudnoscWykonania = "Trudność wykonania: łatwa";
     String skladniki = "<html>Składniki:<br>" +

@@ -4,7 +4,7 @@
 public class TartaJablkowa extends Przepis {
 
     String tytul = "Tarta Jablkowa";
-    String sciezkaGrafiki = "src\\main\\java\\grafiki\\TartaJablkowa.jpg";
+    String sciezkaGrafiki = "src/main/java/grafiki/TartaJablkowa.png";
     String czasWykonania = "Czas wykonania: 60 minut";
     String trudnoscWykonania = "Trudność wykonania: łatwa";
     String skladniki = "<html>Składniki:<br>" +
