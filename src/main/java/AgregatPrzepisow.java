@@ -19,6 +19,21 @@ public class AgregatPrzepisow {
         listaPrzepisow.add(new SorbetTruskawkowy());
         listaPrzepisow.add(new TartaJablkowa());
         listaPrzepisow.add(new ZupaMinestrone());
+        listaPrzepisow.add(new PlackiZiemniaczane());
+        listaPrzepisow.add(new Nalesniki());
+        listaPrzepisow.add(new GulaszWolowy());
+        listaPrzepisow.add(new Churros());
+        listaPrzepisow.add(new CroqueMadame());
+        listaPrzepisow.add(new Zurek());
+        listaPrzepisow.add(new Chlodnik());
+        listaPrzepisow.add(new Karpatka());
+        listaPrzepisow.add(new MakaronZPesto());
+        listaPrzepisow.add(new Szarlotka());
+        listaPrzepisow.add(new Spaghetti());
+        listaPrzepisow.add(new KremDyniowy());
+        listaPrzepisow.add(new PierogiRuskie());
+        listaPrzepisow.add(new KurczakWZiołach());
+        listaPrzepisow.add(new Tatar());
     }
 
     /**
