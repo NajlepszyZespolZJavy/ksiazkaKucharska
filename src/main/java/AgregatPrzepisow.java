@@ -14,6 +14,13 @@ public class AgregatPrzepisow {
     public AgregatPrzepisow() {
         listaPrzepisow.add(new PrzykladowyPrzepis());
         listaPrzepisow.add(new PrzykladowyPrzepis2());
+        listaPrzepisow.add(new PlackiZiemniaczane());
+        listaPrzepisow.add(new Nalesniki());
+        listaPrzepisow.add(new GulaszWolowy());
+        listaPrzepisow.add(new Churros());
+        listaPrzepisow.add(new CroqueMadame());
+        listaPrzepisow.add(new Zurek());
+        listaPrzepisow.add(new Chlodnik());
         listaPrzepisow.add(new Karpatka());
         listaPrzepisow.add(new MakaronZPesto());
         listaPrzepisow.add(new Szarlotka());
