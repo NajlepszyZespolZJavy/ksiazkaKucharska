@@ -4,9 +4,9 @@
 public class CroqueMadame extends Przepis {
 
     String tytul = "Croque Madame";
-    String sciezkaGrafiki = "src\\main\\java\\grafiki\\CroqueMadame.jpg";
+    String sciezkaGrafiki = "src/main/java/grafiki/croque_madame.jpg";
     String czasWykonania = "Czas wykonania: 15 minut";
-    String trudnoscWykonania = "Trudność wykonania: łatwe";
+    String trudnoscWykonania = "Trudność wykonania: łatwa";
     String skladniki = "<html>Składniki:<br>" +
             "4 tosty<br>" +
             "60g tartego sera żółtego<br>" +

@@ -3,9 +3,9 @@
  */
 public class MakaronZPesto extends Przepis {
     String tytul = "Makaron z pesto";
-    String sciezkaGrafiki = "src\\main\\java\\grafiki\\makaron_z_pesto.jpg";
+    String sciezkaGrafiki = "src/main/java/grafiki/makaron_z_pesto.jpg";
     String czasWykonania = "Czas wykonania: 25 minut";
-    String trudnoscWykonania = "Trudność wykonania: łatwe";
+    String trudnoscWykonania = "Trudność wykonania: łatwa";
     String skladniki = "<html>Składniki:<br>" +
             "300g makaronu<br>" +
             "1 doniczka bazylii<br>" +

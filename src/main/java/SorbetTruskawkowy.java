@@ -1,10 +1,10 @@
 /**
- * Klasa Lasagne. Dziedziczy z Przepisu i nadpisuje wszystkie jego metody
+ * Klasa sorbetu truskawkowego. Dziedziczy z Przepisu i nadpisuje wszystkie jego metody
  */
 public class SorbetTruskawkowy extends Przepis {
 
-    String tytul = "Sorbet Truskawkowy";
-    String sciezkaGrafiki = "src/main/java/grafiki/SorbetTruskawkowy.jpg";
+    String tytul = "Sorbet truskawkowy";
+    String sciezkaGrafiki = "src/main/java/grafiki/sorbet_truskawkowy.jpg";
     String czasWykonania = "Czas wykonania: 10 minut";
     String trudnoscWykonania = "Trudność wykonania: łatwa";
     String skladniki = "<html>Składniki:<br>" +
@@ -24,4 +24,3 @@ public class SorbetTruskawkowy extends Przepis {
     protected String getSkladniki() { return skladniki; }
     protected String getInstrukcje() { return instrukcje; }
 }
-

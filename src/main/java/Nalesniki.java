@@ -4,7 +4,7 @@
 public class Nalesniki extends Przepis {
 
     String tytul = "Naleśniki";
-    String sciezkaGrafiki = "src\\main\\java\\grafiki\\Nalesniki.jpg";
+    String sciezkaGrafiki = "src/main/java/grafiki/nalesniki.jpg";
     String czasWykonania = "Czas wykonania: 20 minut";
     String trudnoscWykonania = "Trudność wykonania: łatwa";
     String skladniki = "<html>Składniki:<br>" +

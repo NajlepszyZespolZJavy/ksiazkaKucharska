@@ -4,7 +4,7 @@
 public class Karpatka extends Przepis {
 
     String tytul = "Karpatka";
-    String sciezkaGrafiki = "src\\main\\java\\grafiki\\karpatka.jpg";
+    String sciezkaGrafiki = "src/main/java/grafiki/karpatka.jpg";
     String czasWykonania = "Czas wykonania: 2 godziny";
     String trudnoscWykonania = "Trudność wykonania: średnia";
     String skladniki = "<html>Składniki:<br>" +

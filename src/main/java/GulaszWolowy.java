@@ -4,7 +4,7 @@
 public class GulaszWolowy extends Przepis {
 
     String tytul = "Gulasz wołowy";
-    String sciezkaGrafiki = "src\\main\\java\\grafiki\\GluaszWolowy.jpg";
+    String sciezkaGrafiki = "src/main/java/grafiki/gluasz_wolowy.jpg";
     String czasWykonania = "Czas wykonania: 3 godziny";
     String trudnoscWykonania = "Trudność wykonania: średnia";
     String skladniki = "<html>Składniki:<br>" +

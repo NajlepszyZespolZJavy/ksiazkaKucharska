@@ -12,28 +12,27 @@ public class AgregatPrzepisow {
      * Konstruktor zapełnia listę wszystkimi przepisami
      */
     public AgregatPrzepisow() {
-        listaPrzepisow.add(new PrzykladowyPrzepis());
-        listaPrzepisow.add(new PrzykladowyPrzepis2());
-        listaPrzepisow.add(new Lasagne());
-        listaPrzepisow.add(new PureeWarzywne());
-        listaPrzepisow.add(new SorbetTruskawkowy());
-        listaPrzepisow.add(new TartaJablkowa());
-        listaPrzepisow.add(new ZupaMinestrone());
-        listaPrzepisow.add(new PlackiZiemniaczane());
-        listaPrzepisow.add(new Nalesniki());
-        listaPrzepisow.add(new GulaszWolowy());
+
+        listaPrzepisow.add(new Chlodnik());
         listaPrzepisow.add(new Churros());
         listaPrzepisow.add(new CroqueMadame());
-        listaPrzepisow.add(new Zurek());
-        listaPrzepisow.add(new Chlodnik());
+        listaPrzepisow.add(new GulaszWolowy());
         listaPrzepisow.add(new Karpatka());
-        listaPrzepisow.add(new MakaronZPesto());
-        listaPrzepisow.add(new Szarlotka());
-        listaPrzepisow.add(new Spaghetti());
         listaPrzepisow.add(new KremDyniowy());
+        listaPrzepisow.add(new KurczakWZiolach());
+        listaPrzepisow.add(new Lasagne());
+        listaPrzepisow.add(new MakaronZPesto());
+        listaPrzepisow.add(new Nalesniki());
         listaPrzepisow.add(new PierogiRuskie());
-        listaPrzepisow.add(new KurczakWZiołach());
+        listaPrzepisow.add(new PlackiZiemniaczane());
+        listaPrzepisow.add(new PureeWarzywne());
+        listaPrzepisow.add(new SorbetTruskawkowy());
+        listaPrzepisow.add(new Spaghetti());
+        listaPrzepisow.add(new Szarlotka());
+        listaPrzepisow.add(new TartaJablkowa());
         listaPrzepisow.add(new Tatar());
+        listaPrzepisow.add(new ZupaMinestrone());
+        listaPrzepisow.add(new Zurek());
     }
 
     /**

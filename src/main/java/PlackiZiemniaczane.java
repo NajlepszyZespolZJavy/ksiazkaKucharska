@@ -4,7 +4,7 @@
 public class PlackiZiemniaczane extends Przepis {
 
     String tytul = "Placki ziemniaczane";
-    String sciezkaGrafiki = "src\\main\\java\\grafiki\\PlackiZiemniaczane.jpg";
+    String sciezkaGrafiki = "src/main/java/grafiki/placki_ziemniaczane.jpg";
     String czasWykonania = "Czas wykonania: 30 minut";
     String trudnoscWykonania = "Trudność wykonania: łatwa";
     String skladniki = "<html>Składniki:<br>" +

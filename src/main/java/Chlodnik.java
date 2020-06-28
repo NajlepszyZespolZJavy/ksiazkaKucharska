@@ -4,7 +4,7 @@
 public class Chlodnik extends Przepis {
 
     String tytul = "Chłodnik";
-    String sciezkaGrafiki = "src\\main\\java\\grafiki\\Chlodnik.jpg";
+    String sciezkaGrafiki = "src/main/java/grafiki/chlodnik.jpg";
     String czasWykonania = "Czas wykonania: 30 minut";
     String trudnoscWykonania = "Trudność wykonania: łatwa";
     String skladniki = "<html>Składniki:<br>" +

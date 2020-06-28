@@ -1,10 +1,10 @@
 /**
- * Klasa Lasagne. Dziedziczy z Przepisu i nadpisuje wszystkie jego metody
+ * Klasa lasagne. Dziedziczy z Przepisu i nadpisuje wszystkie jego metody
  */
 public class Lasagne extends Przepis {
 
     String tytul = "Lasagne";
-    String sciezkaGrafiki = "src/main/java/grafiki/Lasagne.jpg";
+    String sciezkaGrafiki = "src/main/java/grafiki/lasagne.jpg";
     String czasWykonania = "Czas wykonania: 150 minut";
     String trudnoscWykonania = "Trudność wykonania: średnia";
     String skladniki = "<html>Składniki:<br>" +
@@ -41,4 +41,3 @@ public class Lasagne extends Przepis {
     protected String getSkladniki() { return skladniki; }
     protected String getInstrukcje() { return instrukcje; }
 }
-

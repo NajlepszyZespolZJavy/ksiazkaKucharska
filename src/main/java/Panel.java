@@ -66,7 +66,7 @@ public class Panel extends JPanel implements ActionListener, KeyListener {
         // strzałka w prawo
         przyciskPrawo = new JButton();
         przyciskPrawo.setBounds(1075, 650, 100, 100);
-        przyciskPrawo.setIcon(new ImageIcon("src/main/java/grafiki/Arrow_R.png"));
+        przyciskPrawo.setIcon(new ImageIcon("src/main/java/grafiki/prawo.png"));
         przyciskPrawo.setContentAreaFilled(true);
         przyciskPrawo.addActionListener(this);
         przyciskPrawo.addKeyListener(this);
@@ -93,7 +93,7 @@ public class Panel extends JPanel implements ActionListener, KeyListener {
 
         // grafika przepisu
         grafika = new JLabel();
-        grafika.setBounds(5, 50, 600, 200);
+        grafika.setBounds(5, 50, 580, 200);
         grafika.setIcon(new ImageIcon(aktualnyPrzepis.getSciezkaGrafiki()));
         tlo.add(grafika);
 

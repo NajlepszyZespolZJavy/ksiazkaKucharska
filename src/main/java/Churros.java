@@ -4,7 +4,7 @@
 public class Churros extends Przepis {
 
     String tytul = "Churros";
-    String sciezkaGrafiki = "src\\main\\java\\grafiki\\Churros.jpg";
+    String sciezkaGrafiki = "src/main/java/grafiki/churros.jpg";
     String czasWykonania = "Czas wykonania: 30 minut";
     String trudnoscWykonania = "Trudność wykonania: łatwa";
     String skladniki = "<html>Składniki:<br>" +

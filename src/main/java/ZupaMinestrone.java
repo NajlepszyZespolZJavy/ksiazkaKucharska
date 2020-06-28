@@ -1,10 +1,10 @@
 /**
- * Klasa ZupaMinestrone. Dziedziczy z Przepisu i nadpisuje wszystkie jego metody
+ * Klasa zupa Minestrone. Dziedziczy z Przepisu i nadpisuje wszystkie jego metody
  */
 public class ZupaMinestrone extends Przepis {
 
     String tytul = "Zupa Minestrone";
-    String sciezkaGrafiki = "src/main/java/grafiki/ZupaMinestrone.jpg";
+    String sciezkaGrafiki = "src/main/java/grafiki/zupa_minestrone.jpg";
     String czasWykonania = "Czas wykonania: 45 minut";
     String trudnoscWykonania = "Trudność wykonania: łatwa";
     String skladniki = "<html>Składniki:<br>" +
@@ -30,4 +30,3 @@ public class ZupaMinestrone extends Przepis {
     protected String getSkladniki() { return skladniki; }
     protected String getInstrukcje() { return instrukcje; }
 }
-

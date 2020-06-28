@@ -4,9 +4,9 @@
 public class Zurek extends Przepis {
 
     String tytul = "Żurek";
-    String sciezkaGrafiki = "src\\main\\java\\grafiki\\Zurek.jpg";
+    String sciezkaGrafiki = "src/main/java/grafiki/zurek.jpg";
     String czasWykonania = "Czas wykonania: 40 minut";
-    String trudnoscWykonania = "Trudność wykonania: x";
+    String trudnoscWykonania = "Trudność wykonania: łatwa";
     String skladniki = "<html>Składniki:<br>" +
             "250g boczku wędzonego (lub 500 g kości lub żeberek wędzonych)<br>" +
             "2l bulionu (np. rosół lub bulion drobiowy)<br>" +

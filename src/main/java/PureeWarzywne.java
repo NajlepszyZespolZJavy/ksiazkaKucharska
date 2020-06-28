@@ -1,10 +1,10 @@
 /**
- * Klasa Lasagne. Dziedziczy z Przepisu i nadpisuje wszystkie jego metody
+ * Klasa puree warzywnego. Dziedziczy z Przepisu i nadpisuje wszystkie jego metody
  */
 public class PureeWarzywne extends Przepis {
 
-    String tytul = "Puree Warzywne";
-    String sciezkaGrafiki = "src/main/java/grafiki/PureeWarzywne.jpg";
+    String tytul = "Puree warzywne";
+    String sciezkaGrafiki = "src/main/java/grafiki/puree_warzywne.jpg";
     String czasWykonania = "Czas wykonania: 25 minut";
     String trudnoscWykonania = "Trudność wykonania: łatwa";
     String skladniki = "<html>Składniki:<br>" +
@@ -25,4 +25,3 @@ public class PureeWarzywne extends Przepis {
     protected String getSkladniki() { return skladniki; }
     protected String getInstrukcje() { return instrukcje; }
 }
-

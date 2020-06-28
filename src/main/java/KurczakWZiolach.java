@@ -1,12 +1,12 @@
 /**
- * Klasa KurczakWZiołach. Dziedziczy z Przepisu i nadpisuje wszystkie jego metody
+ * Klasa kurczaka w ziołach. Dziedziczy z Przepisu i nadpisuje wszystkie jego metody
  */
-public class KurczakWZiołach extends Przepis {
+public class KurczakWZiolach extends Przepis {
 
         String tytul = "Kurczak w ziołach";
-        String sciezkaGrafiki = "src\\main\\java\\grafiki\\kurczakWziołach.jpg";
+        String sciezkaGrafiki = "src/main/java/grafiki/kurczak_w_ziołach.jpg";
         String czasWykonania = "Czas wykonania: 45 minut";
-        String trudnoscWykonania = "Trudność wykonania: łatwe";
+        String trudnoscWykonania = "Trudność wykonania: łatwa";
         String skladniki = "<html>Składniki:<br>" +
                 "1 kurczak <br>" +
                 "ok. 2 łyżek posiekanych ziół <br>" +
