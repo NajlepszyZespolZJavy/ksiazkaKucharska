@@ -51,13 +51,13 @@ public class Panel extends JPanel implements ActionListener, KeyListener {
         JLabel tlo = new JLabel();
         tlo.setBounds(0, 0, WIDTH, HEIGHT);
         setBackground(Color.LIGHT_GRAY);
-        tlo.setIcon(new ImageIcon("src\\main\\java\\grafiki\\tlo.jpg"));
+        tlo.setIcon(new ImageIcon("src/main/java/grafiki/tlo.jpg"));
         setLayout(null);
 
         // strzałka w lewo
         przyciskLewo = new JButton();
         przyciskLewo.setBounds(25, 650, 100, 100);
-        przyciskLewo.setIcon(new ImageIcon("src\\main\\java\\grafiki\\lewo.png"));
+        przyciskLewo.setIcon(new ImageIcon("src/main/java/grafiki/lewo.png"));
         przyciskLewo.setContentAreaFilled(true);
         przyciskLewo.addActionListener(this);
         przyciskLewo.addKeyListener(this);
@@ -66,7 +66,7 @@ public class Panel extends JPanel implements ActionListener, KeyListener {
         // strzałka w prawo
         przyciskPrawo = new JButton();
         przyciskPrawo.setBounds(1075, 650, 100, 100);
-        przyciskPrawo.setIcon(new ImageIcon("src\\main\\java\\grafiki\\prawo.png"));
+        przyciskPrawo.setIcon(new ImageIcon("src/main/java/grafiki/Arrow_R.png"));
         przyciskPrawo.setContentAreaFilled(true);
         przyciskPrawo.addActionListener(this);
         przyciskPrawo.addKeyListener(this);
