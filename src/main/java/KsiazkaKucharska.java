@@ -3,9 +3,10 @@
  */
 public class KsiazkaKucharska {
     /**
-     * Główna metoda od której zaczyna się praca programu.
+     * Główna metoda od której zaczyna się praca programu. Aplikacja tworzy Controller, oraz
+     * View i Model które mu wysyła.
      */
     public static void main(String[] args) {
-        new Ramka();
+        new KsiazkaKucharskaController(new KsiazkaKucharskaView(), new KsiazkaKucharskaModel());
     }
 }
