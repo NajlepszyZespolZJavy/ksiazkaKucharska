@@ -16,6 +16,12 @@ public class AgregatPrzepisow {
         listaPrzepisow.add(new PrzykladowyPrzepis2());
         listaPrzepisow.add(new Karpatka());
         listaPrzepisow.add(new MakaronZPesto());
+        listaPrzepisow.add(new Szarlotka());
+        listaPrzepisow.add(new Spaghetti());
+        listaPrzepisow.add(new KremDyniowy());
+        listaPrzepisow.add(new PierogiRuskie());
+        listaPrzepisow.add(new KurczakWZiołach());
+        listaPrzepisow.add(new Tatar());
     }
 
     /**
