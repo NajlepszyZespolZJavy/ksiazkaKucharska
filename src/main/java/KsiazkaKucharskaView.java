@@ -1,4 +1,3 @@
-import java.awt.Color;
 import java.awt.Font;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -68,7 +67,7 @@ public class KsiazkaKucharskaView extends JFrame {
         tlo.add(przyciskPrawo);
 
         // pole wyszukiwania przepisów
-        poleWyszukiwania = new JTextField("Przepis którego szukam to: ");
+        poleWyszukiwania = new JTextField("Wyszukaj przepis... ");
         poleWyszukiwania.setBounds(400, 700, 400, 40);
         tlo.add(poleWyszukiwania);
 
@@ -118,53 +117,61 @@ public class KsiazkaKucharskaView extends JFrame {
         setVisible(true);
     }
 
-        /**
-         * Wyświetla w okienku informację o przesłanym przepisie i jego grafikę.
-         *
-         * @param aktualnyPrzepis: obiekt klasy Przepis którego dane zostaną wyświetlone na ekranie.
-         */
-        public void wyswietlPrzepis(Przepis aktualnyPrzepis) {
+    /**
+     * Wyświetla w okienku informację o przesłanym przepisie i jego grafikę.
+     *
+     * @param aktualnyPrzepis: obiekt klasy Przepis którego dane zostaną wyświetlone na ekranie.
+     */
+    public void wyswietlPrzepis(Przepis aktualnyPrzepis) {
 
-            tytul.setText(aktualnyPrzepis.getTytul());
-            grafika.setIcon(new ImageIcon(aktualnyPrzepis.getSciezkaGrafiki()));
-            czasWykonania.setText(aktualnyPrzepis.getCzasWykonania());
-            trudnoscWykonania.setText(aktualnyPrzepis.getTrudnoscWykonania());
-            skladniki.setText(aktualnyPrzepis.getSkladniki());
-            instrukcje.setText(aktualnyPrzepis.getInstrukcje());
-        }
+        tytul.setText(aktualnyPrzepis.getTytul());
+        grafika.setIcon(new ImageIcon(aktualnyPrzepis.getSciezkaGrafiki()));
+        czasWykonania.setText(aktualnyPrzepis.getCzasWykonania());
+        trudnoscWykonania.setText(aktualnyPrzepis.getTrudnoscWykonania());
+        skladniki.setText(aktualnyPrzepis.getSkladniki());
+        instrukcje.setText(aktualnyPrzepis.getInstrukcje());
+    }
 
-        /**
-         * Dodaje do komponentów przesłany słuchacz. Odpowiednie jego metody
-         * zostaną wywołane gdy nastąpi zdarzenie dla któregoś z komponentów.
-         *
-         * @param listener: słuchacz komponentów
-         */
-        public void addListeners(KsiazkaKucharskaController listener) {
-            przyciskLewo.addActionListener(listener);
-            przyciskLewo.addKeyListener(listener);
-            przyciskPrawo.addActionListener(listener);
-            przyciskPrawo.addKeyListener(listener);
-            poleWyszukiwania.addKeyListener(listener);
-        }
+    /**
+     * Dodaje do komponentów przesłany słuchacz. Odpowiednie jego metody
+     * zostaną wywołane gdy nastąpi zdarzenie dla któregoś z komponentów.
+     *
+     * @param listener: słuchacz komponentów
+     */
+    public void addListeners(KsiazkaKucharskaController listener) {
+        przyciskLewo.addActionListener(listener);
+        przyciskLewo.addKeyListener(listener);
+        przyciskPrawo.addActionListener(listener);
+        przyciskPrawo.addKeyListener(listener);
+        poleWyszukiwania.addKeyListener(listener);
+        poleWyszukiwania.addFocusListener(listener);
+    }
 
-        /**
-         * Zwraca komponent przycisku w lewo.
-         */
-        public JButton getPrzyciskLewo() {
-            return this.przyciskLewo;
-        }
+    /**
+     * Zwraca komponent przycisku w lewo.
+     */
+    public JButton getPrzyciskLewo() {
+        return this.przyciskLewo;
+    }
 
-        /**
-         * Zwraca komponent przycisku w prawo.
-         */
-        public JButton getPrzyciskPrawo() {
-            return this.przyciskPrawo;
-        }
+    /**
+     * Zwraca komponent przycisku w prawo.
+     */
+    public JButton getPrzyciskPrawo() {
+        return this.przyciskPrawo;
+    }
 
-        /**
-         * Zwraca aktualną zawartość pola tekstowego wyszukiwarki.
-         */
-        public String getPoleWyszukiwania() {
-            return poleWyszukiwania.getText();
-        }
+    /**
+     * Zwraca aktualną zawartość pola tekstowego wyszukiwarki.
+     */
+    public String getPoleWyszukiwania() {
+        return poleWyszukiwania.getText();
+    }
+
+    /**
+     * Czyści zawartość pola tekstowego wyszukiwarki.
+     */
+    public void wyczyscPoleWyszukiwania() {
+            poleWyszukiwania.setText("");
+    }
 }

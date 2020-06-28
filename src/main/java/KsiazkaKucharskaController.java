@@ -1,13 +1,10 @@
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
+import java.awt.event.*;
 
 /**
  * Obsługuje wejście od użytkownika. Kontroluje komunikację View z Modelem pozwalając by
  * każde było niezależną klasą.
  */
-public class KsiazkaKucharskaController implements ActionListener, KeyListener {
+public class KsiazkaKucharskaController implements ActionListener, KeyListener, FocusListener {
 
     private KsiazkaKucharskaView theView;
     private KsiazkaKucharskaModel theModel;
@@ -89,4 +86,18 @@ public class KsiazkaKucharskaController implements ActionListener, KeyListener {
 
     @Override
     public void keyTyped(KeyEvent evt) {}
+
+    /**
+     * Wywoływana gdy komponent zyska focus (np. zostanie zaznaczony myszą).
+     * Czyści w rezultacie zawartość pola tekstowego wyszukiwarki.
+     */
+    @Override
+    public void focusGained(FocusEvent e) {
+        theView.wyczyscPoleWyszukiwania();
+    }
+
+    @Override
+    public void focusLost(FocusEvent e) {
+
+    }
 }
