@@ -37,6 +37,7 @@ public class KsiazkaKucharskaView extends JFrame {
      * do ramki i wyświetla zmiany.
      */
     public KsiazkaKucharskaView() {
+
         // konfiguracja Ramki
         setBounds(0, 0, WIDTH, HEIGHT);
         setTitle("Książka Kucharska");
@@ -151,14 +152,14 @@ public class KsiazkaKucharskaView extends JFrame {
      * Zwraca komponent przycisku w lewo.
      */
     public JButton getPrzyciskLewo() {
-        return this.przyciskLewo;
+        return przyciskLewo;
     }
 
     /**
      * Zwraca komponent przycisku w prawo.
      */
     public JButton getPrzyciskPrawo() {
-        return this.przyciskPrawo;
+        return przyciskPrawo;
     }
 
     /**
@@ -173,5 +174,40 @@ public class KsiazkaKucharskaView extends JFrame {
      */
     public void wyczyscPoleWyszukiwania() {
             poleWyszukiwania.setText("");
+    }
+
+    /**
+     * Zwraca wartość tekstową pola tytułu.
+     */
+    public String getTytul() {
+        return tytul.getText();
+    }
+
+    /**
+     * Zwraca wartość tekstową czasu wykonania.
+     */
+    public String getCzasWykonania() {
+        return czasWykonania.getText();
+    }
+
+    /**
+     * Zwraca wartość tekstową trudności wykonania.
+     */
+    public String getTrudnoscWykonania() {
+        return trudnoscWykonania.getText();
+    }
+
+    /**
+     * Zwraca wartość tekstową skladników.
+     */
+    public String getSkladniki() {
+        return skladniki.getText();
+    }
+
+    /**
+     * Zwraca wartość tekstową instrukcji.
+     */
+    public String getInstrukcje() {
+        return instrukcje.getText();
     }
 }

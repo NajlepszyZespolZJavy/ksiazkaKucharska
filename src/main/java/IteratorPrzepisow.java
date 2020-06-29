@@ -15,8 +15,15 @@ public class IteratorPrzepisow {
     /**
      * Zwraca aktualny element listy.
      */
-    public Przepis aktualnyPrzepis() {
+    public Przepis getAktualnyPrzepis() {
         return listaPrzepisow.get(indeks);
+    }
+
+    /**
+     * Zwraca aktualną wartośc indeksu.
+     */
+    public int getIndeks() {
+        return indeks;
     }
 
     /**
@@ -43,7 +50,7 @@ public class IteratorPrzepisow {
     public void szukajPrzepisu(String szukanaNazwa) {
         for (int i = 0; i < listaPrzepisow.size(); i++) {
             nastepny();
-            if (aktualnyPrzepis().getTytul().toLowerCase().contains(szukanaNazwa.toLowerCase())) {
+            if (getAktualnyPrzepis().getTytul().toLowerCase().contains(szukanaNazwa.toLowerCase())) {
                 System.out.println("Znalazłem!");
                 break;
             }

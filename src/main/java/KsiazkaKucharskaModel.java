@@ -29,7 +29,14 @@ public class KsiazkaKucharskaModel {
      * Zwraca obiekt będący aktualnym przepisem.
      */
     public Przepis getAktualnyPrzepis() {
-        return iterator.aktualnyPrzepis();
+        return iterator.getAktualnyPrzepis();
+    }
+
+    /**
+     * Zwraca iterator.
+     */
+    public IteratorPrzepisow getIterator() {
+        return iterator;
     }
 
     /**
