@@ -1,10 +1,12 @@
+import java.net.URL;
+
 /**
  * Klasa zupa Minestrone. Dziedziczy z Przepisu i nadpisuje wszystkie jego metody
  */
 public class ZupaMinestrone extends Przepis {
 
     String tytul = "Zupa Minestrone";
-    String sciezkaGrafiki = "src/main/java/grafiki/zupa_minestrone.jpg";
+    URL sciezkaGrafiki = ZupaMinestrone.class.getResource("grafiki/zupa_minestrone.jpg");
     String czasWykonania = "Czas wykonania: 45 minut";
     String trudnoscWykonania = "Trudność wykonania: łatwa";
     String skladniki = "<html>Składniki:<br>" +
@@ -24,7 +26,7 @@ public class ZupaMinestrone extends Przepis {
             "5) Dodać sól i makaron, gotować zgodnie z czasem podanym na opakowaniu.";
 
     protected String getTytul() { return tytul; }
-    protected String getSciezkaGrafiki() { return sciezkaGrafiki; }
+    protected URL getSciezkaGrafiki() { return sciezkaGrafiki; }
     protected String getCzasWykonania() { return czasWykonania; }
     protected String getTrudnoscWykonania() { return trudnoscWykonania; }
     protected String getSkladniki() { return skladniki; }

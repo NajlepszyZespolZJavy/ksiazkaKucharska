@@ -1,10 +1,12 @@
+import java.net.URL;
+
 /**
  * Klasa churros. Dziedziczy z Przepisu i nadpisuje wszystkie jego metody
  */
 public class Churros extends Przepis {
 
     String tytul = "Churros";
-    String sciezkaGrafiki = "src/main/java/grafiki/churros.jpg";
+    URL sciezkaGrafiki = Churros.class.getResource("grafiki/churros.jpg");
     String czasWykonania = "Czas wykonania: 30 minut";
     String trudnoscWykonania = "Trudność wykonania: łatwa";
     String skladniki = "<html>Składniki:<br>" +
@@ -24,7 +26,7 @@ public class Churros extends Przepis {
             "4) Smażyć po około 2 minuty z każdej strony na złoty kolor, wyławiać łyżką cedzakową i odkładać na talerz wyłożony ręcznikami papierowymi. Po przestudzeniu posypać cukrem pudrem z cynamonem.";
 
     protected String getTytul() { return tytul; }
-    protected String getSciezkaGrafiki() { return sciezkaGrafiki; }
+    protected URL getSciezkaGrafiki() { return sciezkaGrafiki; }
     protected String getCzasWykonania() { return czasWykonania; }
     protected String getTrudnoscWykonania() { return trudnoscWykonania; }
     protected String getSkladniki() { return skladniki; }

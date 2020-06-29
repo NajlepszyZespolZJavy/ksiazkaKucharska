@@ -1,10 +1,12 @@
+import java.net.URL;
+
 /**
  * Klasa sorbetu truskawkowego. Dziedziczy z Przepisu i nadpisuje wszystkie jego metody
  */
 public class SorbetTruskawkowy extends Przepis {
 
     String tytul = "Sorbet truskawkowy";
-    String sciezkaGrafiki = "src/main/java/grafiki/sorbet_truskawkowy.jpg";
+    URL sciezkaGrafiki = SorbetTruskawkowy.class.getResource("grafiki/sorbet_truskawkowy.jpg");
     String czasWykonania = "Czas wykonania: 10 minut";
     String trudnoscWykonania = "Trudność wykonania: łatwa";
     String skladniki = "<html>Składniki:<br>" +
@@ -18,7 +20,7 @@ public class SorbetTruskawkowy extends Przepis {
             "4) Podawać bezpośrednio po przygotowaniu";
 
     protected String getTytul() { return tytul; }
-    protected String getSciezkaGrafiki() { return sciezkaGrafiki; }
+    protected URL getSciezkaGrafiki() { return sciezkaGrafiki; }
     protected String getCzasWykonania() { return czasWykonania; }
     protected String getTrudnoscWykonania() { return trudnoscWykonania; }
     protected String getSkladniki() { return skladniki; }

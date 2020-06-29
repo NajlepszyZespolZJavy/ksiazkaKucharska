@@ -1,3 +1,5 @@
+import java.net.URL;
+
 /**
  * Klasa wirtualna z której dziedziczą poszczególe przepisy i nadpisują jej metody
  */
@@ -11,7 +13,7 @@ public abstract class Przepis {
     protected String instrukcje;
 
     protected abstract String getTytul();
-    protected abstract String getSciezkaGrafiki();
+    protected abstract URL getSciezkaGrafiki();
     protected abstract String getCzasWykonania();
     protected abstract String getTrudnoscWykonania();
     protected abstract String getSkladniki();

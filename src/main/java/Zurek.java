@@ -1,10 +1,12 @@
+import java.net.URL;
+
 /**
  * Klasa żurku. Dziedziczy z Przepisu i nadpisuje wszystkie jego metody
  */
 public class Zurek extends Przepis {
 
     String tytul = "Żurek";
-    String sciezkaGrafiki = "src/main/java/grafiki/zurek.jpg";
+    URL sciezkaGrafiki = Zurek.class.getResource("grafiki/zurek.jpg");
     String czasWykonania = "Czas wykonania: 40 minut";
     String trudnoscWykonania = "Trudność wykonania: łatwa";
     String skladniki = "<html>Składniki:<br>" +
@@ -26,7 +28,7 @@ public class Zurek extends Przepis {
             "5) Podgrzać i podawać z dodatkami.<br>";
 
     protected String getTytul() { return tytul; }
-    protected String getSciezkaGrafiki() { return sciezkaGrafiki; }
+    protected URL getSciezkaGrafiki() { return sciezkaGrafiki; }
     protected String getCzasWykonania() { return czasWykonania; }
     protected String getTrudnoscWykonania() { return trudnoscWykonania; }
     protected String getSkladniki() { return skladniki; }

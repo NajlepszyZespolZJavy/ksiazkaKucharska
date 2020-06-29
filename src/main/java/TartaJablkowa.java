@@ -1,10 +1,12 @@
+import java.net.URL;
+
 /**
  * Klasa tartej jabłkowej. Dziedziczy z Przepisu i nadpisuje wszystkie jego metody
  */
 public class TartaJablkowa extends Przepis {
 
     String tytul = "Tarta jabłkowa";
-    String sciezkaGrafiki = "src/main/java/grafiki/tarta_jablkowa.png";
+    URL sciezkaGrafiki = TartaJablkowa.class.getResource("grafiki/tarta_jablkowa.png");
     String czasWykonania = "Czas wykonania: 60 minut";
     String trudnoscWykonania = "Trudność wykonania: łatwa";
     String skladniki = "<html>Składniki:<br>" +
@@ -25,7 +27,7 @@ public class TartaJablkowa extends Przepis {
             "   momentu, aż jabłka nabiorą złotego koloru. Podawać na ciepło.";
 
     protected String getTytul() { return tytul; }
-    protected String getSciezkaGrafiki() { return sciezkaGrafiki; }
+    protected URL getSciezkaGrafiki() { return sciezkaGrafiki; }
     protected String getCzasWykonania() { return czasWykonania; }
     protected String getTrudnoscWykonania() { return trudnoscWykonania; }
     protected String getSkladniki() { return skladniki; }

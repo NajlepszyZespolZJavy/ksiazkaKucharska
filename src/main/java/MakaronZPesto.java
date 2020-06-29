@@ -1,9 +1,11 @@
+import java.net.URL;
+
 /**
  * Klasa makaronu z pesto. Dziedziczy z Przepisu i nadpisuje wszystkie jego metody
  */
 public class MakaronZPesto extends Przepis {
     String tytul = "Makaron z pesto";
-    String sciezkaGrafiki = "src/main/java/grafiki/makaron_z_pesto.jpg";
+    URL sciezkaGrafiki = MakaronZPesto.class.getResource("grafiki/makaron_z_pesto.jpg");
     String czasWykonania = "Czas wykonania: 25 minut";
     String trudnoscWykonania = "Trudność wykonania: łatwa";
     String skladniki = "<html>Składniki:<br>" +
@@ -26,7 +28,7 @@ public class MakaronZPesto extends Przepis {
             "4) Makaron ugotuj al dente. Wymieszaj z sosem i podawaj.";
 
     protected String getTytul() { return tytul; }
-    protected String getSciezkaGrafiki() { return sciezkaGrafiki; }
+    protected URL getSciezkaGrafiki() { return sciezkaGrafiki; }
     protected String getCzasWykonania() { return czasWykonania; }
     protected String getTrudnoscWykonania() { return trudnoscWykonania; }
     protected String getSkladniki() { return skladniki; }

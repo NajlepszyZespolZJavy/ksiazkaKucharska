@@ -1,10 +1,12 @@
+import java.net.URL;
+
 /**
  * Klasa Croque Madame. Dziedziczy z Przepisu i nadpisuje wszystkie jego metody
  */
 public class CroqueMadame extends Przepis {
 
     String tytul = "Croque Madame";
-    String sciezkaGrafiki = "src/main/java/grafiki/croque_madame.jpg";
+    URL sciezkaGrafiki = CroqueMadame.class.getResource("grafiki/croque_madame.jpg");
     String czasWykonania = "Czas wykonania: 15 minut";
     String trudnoscWykonania = "Trudność wykonania: łatwa";
     String skladniki = "<html>Składniki:<br>" +
@@ -21,7 +23,7 @@ public class CroqueMadame extends Przepis {
             "po ok. 1,5 minuty z każdej strony. Oddzielnie usmażyć 2 jajka sadzone. Tosty przełożyć na talerze i przykryć jajkiem sadzonym.";
 
     protected String getTytul() { return tytul; }
-    protected String getSciezkaGrafiki() { return sciezkaGrafiki; }
+    protected URL getSciezkaGrafiki() { return sciezkaGrafiki; }
     protected String getCzasWykonania() { return czasWykonania; }
     protected String getTrudnoscWykonania() { return trudnoscWykonania; }
     protected String getSkladniki() { return skladniki; }

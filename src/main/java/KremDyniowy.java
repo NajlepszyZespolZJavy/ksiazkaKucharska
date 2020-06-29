@@ -1,10 +1,12 @@
+import java.net.URL;
+
 /**
  * Klasa kremu dyniowego. Dziedziczy z Przepisu i nadpisuje wszystkie jego metody
  */
 public class KremDyniowy extends Przepis {
 
     String tytul = "Krem dyniowy";
-    String sciezkaGrafiki = "src/main/java/grafiki/krem_dyniowy.jpg";
+    URL sciezkaGrafiki = KremDyniowy.class.getResource("grafiki/krem_dyniowy.jpg");
     String czasWykonania = "Czas wykonania: 60 minut";
     String trudnoscWykonania = "Trudność wykonania: łatwa";
     String skladniki = "<html>Składniki:<br>" +
@@ -28,7 +30,7 @@ public class KremDyniowy extends Przepis {
             "7) Dodać śmietanę. (Można ją dodać podczas miksowania lub dolać do zupy rozlanej na talerzach).";
 
     protected String getTytul() { return tytul; }
-    protected String getSciezkaGrafiki() { return sciezkaGrafiki; }
+    protected URL getSciezkaGrafiki() { return sciezkaGrafiki; }
     protected String getCzasWykonania() { return czasWykonania; }
     protected String getTrudnoscWykonania() { return trudnoscWykonania; }
     protected String getSkladniki() { return skladniki; }

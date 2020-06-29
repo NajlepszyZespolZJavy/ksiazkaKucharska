@@ -1,10 +1,12 @@
+import java.net.URL;
+
 /**
  * Klasa spaghetti. Dziedziczy z Przepisu i nadpisuje wszystkie jego metody
  */
 public class Spaghetti extends Przepis {
 
     String tytul = "Spaghetti";
-    String sciezkaGrafiki = "src\\main\\java\\grafiki\\spaghetti.jpg";
+    URL sciezkaGrafiki = Spaghetti.class.getResource("grafiki/spaghetti.jpg");
     String czasWykonania = "Czas wykonania: 45 minut";
     String trudnoscWykonania = "Trudność wykonania: łatwa";
     String skladniki = "<html>Składniki:<br>" +
@@ -26,7 +28,7 @@ public class Spaghetti extends Przepis {
             "4)Makaron ugotuj al dente, podawaj go z sosem, serem, i bazylią.";
 
     protected String getTytul() { return tytul; }
-    protected String getSciezkaGrafiki() { return sciezkaGrafiki; }
+    protected URL getSciezkaGrafiki() { return sciezkaGrafiki; }
     protected String getCzasWykonania() { return czasWykonania; }
     protected String getTrudnoscWykonania() { return trudnoscWykonania; }
     protected String getSkladniki() { return skladniki; }

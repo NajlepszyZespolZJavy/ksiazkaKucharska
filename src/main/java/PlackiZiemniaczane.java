@@ -1,10 +1,12 @@
+import java.net.URL;
+
 /**
  * Klasa placków ziemniacznych. Dziedziczy z Przepisu i nadpisuje wszystkie jego metody
  */
 public class PlackiZiemniaczane extends Przepis {
 
     String tytul = "Placki ziemniaczane";
-    String sciezkaGrafiki = "src/main/java/grafiki/placki_ziemniaczane.jpg";
+    URL sciezkaGrafiki = PlackiZiemniaczane.class.getResource("grafiki/placki_ziemniaczane.jpg");
     String czasWykonania = "Czas wykonania: 30 minut";
     String trudnoscWykonania = "Trudność wykonania: łatwa";
     String skladniki = "<html>Składniki:<br>" +
@@ -26,7 +28,7 @@ public class PlackiZiemniaczane extends Przepis {
             "6) Gotowe! Można doprawić według uznania.<br>";
 
     protected String getTytul() { return tytul; }
-    protected String getSciezkaGrafiki() { return sciezkaGrafiki; }
+    protected URL getSciezkaGrafiki() { return sciezkaGrafiki; }
     protected String getCzasWykonania() { return czasWykonania; }
     protected String getTrudnoscWykonania() { return trudnoscWykonania; }
     protected String getSkladniki() { return skladniki; }

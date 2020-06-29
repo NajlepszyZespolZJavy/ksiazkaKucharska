@@ -1,10 +1,12 @@
+import java.net.URL;
+
 /**
  * Klasa puree warzywnego. Dziedziczy z Przepisu i nadpisuje wszystkie jego metody
  */
 public class PureeWarzywne extends Przepis {
 
     String tytul = "Puree warzywne";
-    String sciezkaGrafiki = "src/main/java/grafiki/puree_warzywne.jpg";
+    URL sciezkaGrafiki = PureeWarzywne.class.getResource("grafiki/puree_warzywne.jpg");
     String czasWykonania = "Czas wykonania: 25 minut";
     String trudnoscWykonania = "Trudność wykonania: łatwa";
     String skladniki = "<html>Składniki:<br>" +
@@ -19,7 +21,7 @@ public class PureeWarzywne extends Przepis {
             "2) Dodać gałkę muszkatołową i zmiksowac na  puree. Podawać na gorąco.";
 
     protected String getTytul() { return tytul; }
-    protected String getSciezkaGrafiki() { return sciezkaGrafiki; }
+    protected URL getSciezkaGrafiki() { return sciezkaGrafiki; }
     protected String getCzasWykonania() { return czasWykonania; }
     protected String getTrudnoscWykonania() { return trudnoscWykonania; }
     protected String getSkladniki() { return skladniki; }

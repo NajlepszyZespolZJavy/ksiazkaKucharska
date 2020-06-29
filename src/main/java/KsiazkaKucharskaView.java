@@ -50,26 +50,26 @@ public class KsiazkaKucharskaView extends JFrame {
         panel.setBounds(0, 0, WIDTH, HEIGHT);
         JLabel tlo = new JLabel();
         tlo.setBounds(0, 0, WIDTH, HEIGHT);
-        tlo.setIcon(new ImageIcon("src/main/java/grafiki/tlo.jpg"));
+        tlo.setIcon(new ImageIcon(KsiazkaKucharskaView.class.getResource("grafiki/tlo.jpg")));
         panel.setLayout(null);
 
         // strzałka w lewo
         przyciskLewo = new JButton();
-        przyciskLewo.setBounds(25, 650, 100, 100);
-        przyciskLewo.setIcon(new ImageIcon("src/main/java/grafiki/lewo.png"));
+        przyciskLewo.setBounds(800, 695, 100, 50);
+        przyciskLewo.setIcon(new ImageIcon(KsiazkaKucharskaView.class.getResource("grafiki/lewo.png")));
         przyciskLewo.setContentAreaFilled(true);
         tlo.add(przyciskLewo);
 
         // strzałka w prawo
         przyciskPrawo = new JButton();
-        przyciskPrawo.setBounds(1075, 650, 100, 100);
-        przyciskPrawo.setIcon(new ImageIcon("src/main/java/grafiki/prawo.png"));
+        przyciskPrawo.setBounds(910, 695, 100, 50);
+        przyciskPrawo.setIcon(new ImageIcon(KsiazkaKucharskaView.class.getResource("grafiki/prawo.png")));
         przyciskPrawo.setContentAreaFilled(true);
         tlo.add(przyciskPrawo);
 
         // pole wyszukiwania przepisów
         poleWyszukiwania = new JTextField("Wyszukaj przepis... ");
-        poleWyszukiwania.setBounds(400, 700, 400, 40);
+        poleWyszukiwania.setBounds(100, 700, 400, 40);
         tlo.add(poleWyszukiwania);
 
         // tytuł przepisu

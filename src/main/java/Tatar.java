@@ -1,10 +1,12 @@
+import java.net.URL;
+
 /**
  * Klasa tataru. Dziedziczy z Przepisu i nadpisuje wszystkie jego metody
  */
 public class Tatar extends Przepis {
 
     String tytul = "Tatar";
-    String sciezkaGrafiki = "src/main/java/grafiki/tatar.jpg";
+    URL sciezkaGrafiki = Tatar.class.getResource("grafiki/tatar.jpg");
     String czasWykonania = "Czas wykonania: 25 minut";
     String trudnoscWykonania = "Trudność wykonania: łatwa";
     String skladniki = "<html>Składniki:<br>" +
@@ -26,7 +28,7 @@ public class Tatar extends Przepis {
             "lub grzankami oraz masłem";
 
     protected String getTytul() { return tytul; }
-    protected String getSciezkaGrafiki() { return sciezkaGrafiki; }
+    protected URL getSciezkaGrafiki() { return sciezkaGrafiki; }
     protected String getCzasWykonania() { return czasWykonania; }
     protected String getTrudnoscWykonania() { return trudnoscWykonania; }
     protected String getSkladniki() { return skladniki; }

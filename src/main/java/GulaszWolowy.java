@@ -1,10 +1,12 @@
+import java.net.URL;
+
 /**
  * Klasa gulaszu wołowego. Dziedziczy z Przepisu i nadpisuje wszystkie jego metody
  */
 public class GulaszWolowy extends Przepis {
 
     String tytul = "Gulasz wołowy";
-    String sciezkaGrafiki = "src/main/java/grafiki/gluasz_wolowy.jpg";
+    URL sciezkaGrafiki = GulaszWolowy.class.getResource("grafiki/gluasz_wolowy.jpg");
     String czasWykonania = "Czas wykonania: 3 godziny";
     String trudnoscWykonania = "Trudność wykonania: średnia";
     String skladniki = "<html>Składniki:<br>" +
@@ -29,7 +31,7 @@ public class GulaszWolowy extends Przepis {
             "pokrojone pieczarki. Wymieszać, przykryć i gotować jeszcze przez 1/2 godziny.<br>";
 
     protected String getTytul() { return tytul; }
-    protected String getSciezkaGrafiki() { return sciezkaGrafiki; }
+    protected URL getSciezkaGrafiki() { return sciezkaGrafiki; }
     protected String getCzasWykonania() { return czasWykonania; }
     protected String getTrudnoscWykonania() { return trudnoscWykonania; }
     protected String getSkladniki() { return skladniki; }

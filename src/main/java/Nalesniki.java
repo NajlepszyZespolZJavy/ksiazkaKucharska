@@ -1,10 +1,12 @@
+import java.net.URL;
+
 /**
  * Klasa naleśników. Dziedziczy z Przepisu i nadpisuje wszystkie jego metody
  */
 public class Nalesniki extends Przepis {
 
     String tytul = "Naleśniki";
-    String sciezkaGrafiki = "src/main/java/grafiki/nalesniki.jpg";
+    URL sciezkaGrafiki = Nalesniki.class.getResource("grafiki/nalesniki.jpg");
     String czasWykonania = "Czas wykonania: 20 minut";
     String trudnoscWykonania = "Trudność wykonania: łatwa";
     String skladniki = "<html>Składniki:<br>" +
@@ -23,7 +25,7 @@ public class Nalesniki extends Przepis {
             "Przewrócić na drugą stronę gdy spód naleśnika będzie już ładnie zrumieniony i ścięty.";
 
     protected String getTytul() { return tytul; }
-    protected String getSciezkaGrafiki() { return sciezkaGrafiki; }
+    protected URL getSciezkaGrafiki() { return sciezkaGrafiki; }
     protected String getCzasWykonania() { return czasWykonania; }
     protected String getTrudnoscWykonania() { return trudnoscWykonania; }
     protected String getSkladniki() { return skladniki; }

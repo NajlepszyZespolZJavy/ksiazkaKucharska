@@ -1,10 +1,12 @@
+import java.net.URL;
+
 /**
  * Klasa karpatki. Dziedziczy z Przepisu i nadpisuje wszystkie jego metody
  */
 public class Karpatka extends Przepis {
 
     String tytul = "Karpatka";
-    String sciezkaGrafiki = "src/main/java/grafiki/karpatka.jpg";
+    URL sciezkaGrafiki = Karpatka.class.getResource("grafiki/karpatka.jpg");
     String czasWykonania = "Czas wykonania: 2 godziny";
     String trudnoscWykonania = "Trudność wykonania: średnia";
     String skladniki = "<html>Składniki:<br>" +
@@ -37,7 +39,7 @@ public class Karpatka extends Przepis {
             "7) Gotowe posypać cukrem pudrem.";
 
     protected String getTytul() { return tytul; }
-    protected String getSciezkaGrafiki() { return sciezkaGrafiki; }
+    protected URL getSciezkaGrafiki() { return sciezkaGrafiki; }
     protected String getCzasWykonania() { return czasWykonania; }
     protected String getTrudnoscWykonania() { return trudnoscWykonania; }
     protected String getSkladniki() { return skladniki; }

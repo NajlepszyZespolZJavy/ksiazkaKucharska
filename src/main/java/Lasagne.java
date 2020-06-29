@@ -1,21 +1,19 @@
+import java.net.URL;
+
 /**
  * Klasa lasagne. Dziedziczy z Przepisu i nadpisuje wszystkie jego metody
  */
 public class Lasagne extends Przepis {
 
     String tytul = "Lasagne";
-    String sciezkaGrafiki = "src/main/java/grafiki/lasagne.jpg";
+    URL sciezkaGrafiki = Lasagne.class.getResource("grafiki/lasagne.jpg");
     String czasWykonania = "Czas wykonania: 150 minut";
     String trudnoscWykonania = "Trudność wykonania: średnia";
     String skladniki = "<html>Składniki:<br>" +
-            "100-200 g sera parmezan pokrojonego na niewielkie kawałki<br>" +
-            "200 g warzyw mieszanych<br>" +
-            "40 g oliwy z oliwek<br>" +
-            "800 g mięsa mielonego, mieszanego<br>" +
-            "100 g białego wytrwanego wina<br>" +
-            "300 g przecieru pomidorowego<br>" +
-            "1-2 łyżeczki soli do smaku<br>" +
-            "1 łyżeczka czarnego pieprzu<br>" +
+            "100-200 g sera parmezan&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;800 g mięsa mielonego<br>" +
+            "200 g warzyw mieszanych&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;40 g oliwy z oliwek<br>" +
+            "100 g białego wytrwanego wina&emsp;&emsp;&emsp;&nbsp;&nbsp;300 g przecieru pomidorowego<br>" +
+            "1-2 łyżeczki soli do smaku&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;1 łyżeczka czarnego pieprzu<br>" +
             "500 g mleka<br>" +
             "40 g masła<br>" +
             "60g mąki przennej<br>" +
@@ -35,7 +33,7 @@ public class Lasagne extends Przepis {
             "9) Piec 35 min.";
 
     protected String getTytul() { return tytul; }
-    protected String getSciezkaGrafiki() { return sciezkaGrafiki; }
+    protected URL getSciezkaGrafiki() { return sciezkaGrafiki; }
     protected String getCzasWykonania() { return czasWykonania; }
     protected String getTrudnoscWykonania() { return trudnoscWykonania; }
     protected String getSkladniki() { return skladniki; }

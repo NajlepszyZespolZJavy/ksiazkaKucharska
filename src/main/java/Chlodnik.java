@@ -1,10 +1,12 @@
+import java.net.URL;
+
 /**
  * Klasa chłodniku. Dziedziczy z Przepisu i nadpisuje wszystkie jego metody
  */
 public class Chlodnik extends Przepis {
 
     String tytul = "Chłodnik";
-    String sciezkaGrafiki = "src/main/java/grafiki/chlodnik.jpg";
+    URL sciezkaGrafiki = Chlodnik.class.getResource("/grafiki/chlodnik.jpg");
     String czasWykonania = "Czas wykonania: 30 minut";
     String trudnoscWykonania = "Trudność wykonania: łatwa";
     String skladniki = "<html>Składniki:<br>" +
@@ -24,7 +26,7 @@ public class Chlodnik extends Przepis {
             "5) Schłodzić w lodówce.";
 
     protected String getTytul() { return tytul; }
-    protected String getSciezkaGrafiki() { return sciezkaGrafiki; }
+    protected URL getSciezkaGrafiki() { return sciezkaGrafiki; }
     protected String getCzasWykonania() { return czasWykonania; }
     protected String getTrudnoscWykonania() { return trudnoscWykonania; }
     protected String getSkladniki() { return skladniki; }

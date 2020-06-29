@@ -1,10 +1,12 @@
+import java.net.URL;
+
 /**
  * Klasa kurczaka w ziołach. Dziedziczy z Przepisu i nadpisuje wszystkie jego metody
  */
 public class KurczakWZiolach extends Przepis {
 
         String tytul = "Kurczak w ziołach";
-        String sciezkaGrafiki = "src/main/java/grafiki/kurczak_w_ziołach.jpg";
+        URL sciezkaGrafiki = KurczakWZiolach.class.getResource("grafiki/kurczak_w_ziołach.jpg");
         String czasWykonania = "Czas wykonania: 45 minut";
         String trudnoscWykonania = "Trudność wykonania: łatwa";
         String skladniki = "<html>Składniki:<br>" +
@@ -22,7 +24,7 @@ public class KurczakWZiolach extends Przepis {
 
 
         protected String getTytul() { return tytul; }
-        protected String getSciezkaGrafiki() { return sciezkaGrafiki; }
+        protected URL getSciezkaGrafiki() { return sciezkaGrafiki; }
         protected String getCzasWykonania() { return czasWykonania; }
         protected String getTrudnoscWykonania() { return trudnoscWykonania; }
         protected String getSkladniki() { return skladniki; }

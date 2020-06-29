@@ -1,10 +1,12 @@
+import java.net.URL;
+
 /**
  * Klasa pierogów ruskich. Dziedziczy z Przepisu i nadpisuje wszystkie jego metody
  */
 public class PierogiRuskie extends Przepis {
 
     String tytul = "Pierogi ruskie";
-    String sciezkaGrafiki = "src/main/java/grafiki/pierogi_ruskie.jpg";
+    URL sciezkaGrafiki = PierogiRuskie.class.getResource("grafiki/pierogi_ruskie.jpg");
     String czasWykonania = "Czas wykonania: 60 minut";
     String trudnoscWykonania = "Trudność wykonania: średnia";
     String skladniki = "<html>Składniki:<br>" +
@@ -33,7 +35,7 @@ public class PierogiRuskie extends Przepis {
             "przywarły do dna garnka. <br>";
 
     protected String getTytul() { return tytul; }
-    protected String getSciezkaGrafiki() { return sciezkaGrafiki; }
+    protected URL getSciezkaGrafiki() { return sciezkaGrafiki; }
     protected String getCzasWykonania() { return czasWykonania; }
     protected String getTrudnoscWykonania() { return trudnoscWykonania; }
     protected String getSkladniki() { return skladniki; }

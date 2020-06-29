@@ -1,3 +1,5 @@
+import java.net.URL;
+
 /**
  * Klasa szarlotki. Dziedziczy z Przepisu i nadpisuje wszystkie jego metody
  */
@@ -5,7 +7,7 @@
 public class Szarlotka extends Przepis {
 
     String tytul = "Szarlotka";
-    String sciezkaGrafiki = "src/main/java/grafiki/szarlotka.jpg";
+    URL sciezkaGrafiki = Szarlotka.class.getResource("grafiki/szarlotka.jpg");
     String czasWykonania = "Czas wykonania: 90 minut";
     String trudnoscWykonania = "Trudność wykonania: średnia";
     String skladniki = "<html>Składniki:<br>" +
@@ -32,7 +34,7 @@ public class Szarlotka extends Przepis {
             " Pokroić po ostudzeniu.";
 
     protected String getTytul() { return tytul; }
-    protected String getSciezkaGrafiki() { return sciezkaGrafiki; }
+    protected URL getSciezkaGrafiki() { return sciezkaGrafiki; }
     protected String getCzasWykonania() { return czasWykonania; }
     protected String getTrudnoscWykonania() { return trudnoscWykonania; }
     protected String getSkladniki() { return skladniki; }
