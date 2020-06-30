@@ -24,7 +24,7 @@ public class Lasagne extends Przepis {
             "2) Mieszankę warzyw drobno pokoroić, dodać oliwę, dusić przez około 5 min.<br>" +
             "3) Dodać mięso, dusić kolejne 10 min.<br>" +
             "4) Dodać wino, gotować przez około 5 min.<br>" +
-            "5) Dodać przecier pomidorowy, sól i pieprz, gotować 20 min. Następnie odstawić i pozostawić pod przykrcyiem." +
+            "5) Dodać przecier pomidorowy, sól i pieprz, gotować 20 min. Następnie odstawić i pozostawić pod przykrcyiem.<br>" +
             "6) Do naczynia wlać mleko, dodać masło, mąkę, sól, gałkę muszkatołową, gotować 10 min. Tak przygotowany sos należy schłodzić<br>" +
             "7) Rozgrzać piekarnik do temp. 180 stopni. Naczynie do zapiekania natłuścić, odstawić.<br>" +
             "8) Na dno naczynia żaroodpornego nałożyć cienką wartswę sosu bolońskiego. Na sosie ułożyć warstwę makaronu,<br>" +

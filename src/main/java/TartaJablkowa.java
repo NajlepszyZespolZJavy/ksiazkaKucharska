@@ -20,7 +20,7 @@ public class TartaJablkowa extends Przepis {
             "10 g masła";
     String instrukcje = "<html>Instrukcje:<br>" +
             "1) Rozgrzać piekarnik do temp. 200 stopni. Formę do tarty natłuścić i oprószyć mąką, odstawić.<br>" +
-            "2) Do naczynia miksująceo włożyć masło, mąkę, sól, cukier waniliowy i wodę, wymieszać a następnie wyrobić.<br>." +
+            "2) Do naczynia miksująceo włożyć masło, mąkę, sól, cukier waniliowy i wodę, wymieszać a następnie wyrobić.<br>" +
             "3) Ciasto przełożyć na oprószony mąką blat i rozwałkować. Ciastem wyłożyć przygotowaną formę do tarty.<br>" +
             "4) Obrać jabłka, pokroić w ćwiartki i usunąć gniazda nasienne. Pokroić ćwiartki w plasterki i ułożyć<br>" +
             "   na wierzch ciasta, tworząc wzór rozety. Na wierzchu ułożyć małe kawałki masła. Piec 30-35 min. lub do <br>" +

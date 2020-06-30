@@ -15,9 +15,9 @@ public class SorbetTruskawkowy extends Przepis {
             "1 banan, świeży";
     String instrukcje = "<html>Instrukcje:<br>" +
             "1) Do naczynia wsypać cukier, rozdrobnić.<br>" +
-            "2) Dodać truskawki, rozdrobić<br>." +
-            "3) Dodać banana, wymieszać<br>" +
-            "4) Podawać bezpośrednio po przygotowaniu";
+            "2) Dodać truskawki, rozdrobić.<br>" +
+            "3) Dodać banana, wymieszać.<br>" +
+            "4) Podawać bezpośrednio po przygotowaniu.";
 
     protected String getTytul() { return tytul; }
     protected URL getSciezkaGrafiki() { return sciezkaGrafiki; }

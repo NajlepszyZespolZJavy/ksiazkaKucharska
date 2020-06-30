@@ -29,6 +29,7 @@ public class KsiazkaKucharskaController implements ActionListener, KeyListener, 
         this.theView.wyswietlPrzepis(this.aktualnyPrzepis);
 
         this.theView.addListeners(this);
+        this.theView.getPrzyciskLewo().requestFocus(); // żeby wyszukiwarka nie dostała domyślnie focusu
     }
 
     /**
@@ -41,14 +42,12 @@ public class KsiazkaKucharskaController implements ActionListener, KeyListener, 
         Object source = e.getSource();
 
         if (source == theView.getPrzyciskLewo()) {
-            System.out.println("Naciśnięto lewy przycisk!");
             theModel.zmienNaPoprzedni();
             aktualnyPrzepis = theModel.getAktualnyPrzepis();
             theView.wyswietlPrzepis(aktualnyPrzepis);
         }
 
         else if (source == theView.getPrzyciskPrawo()) {
-            System.out.println("Naciśnięto prawy przycisk!");
             theModel.zmienNaNastepny();
             aktualnyPrzepis = theModel.getAktualnyPrzepis();
             theView.wyswietlPrzepis(aktualnyPrzepis);
@@ -63,23 +62,21 @@ public class KsiazkaKucharskaController implements ActionListener, KeyListener, 
     @Override
     public void keyReleased(KeyEvent evt) {
         int key = evt.getKeyCode();
+        Object source = evt.getSource();
 
-        if (key == KeyEvent.VK_LEFT) {
-            System.out.println("Naciśnięto strzałkę w lewo!");
-            theModel.zmienNaPoprzedni();
-            aktualnyPrzepis = theModel.getAktualnyPrzepis();
-            theView.wyswietlPrzepis(aktualnyPrzepis);
+        if (source == theView.getPrzyciskLewo() || source == theView.getPrzyciskPrawo()) {
+            if (key == KeyEvent.VK_LEFT) {
+                theModel.zmienNaPoprzedni();
+                aktualnyPrzepis = theModel.getAktualnyPrzepis();
+                theView.wyswietlPrzepis(aktualnyPrzepis);
+            }
+            else if (key == KeyEvent.VK_RIGHT) {
+                theModel.zmienNaNastepny();
+                aktualnyPrzepis = theModel.getAktualnyPrzepis();
+                theView.wyswietlPrzepis(aktualnyPrzepis);
+            }
         }
-        else if (key == KeyEvent.VK_RIGHT) {
-            System.out.println("Naciśnięto strzałkę w prawo!");
-            theModel.zmienNaNastepny();
-            aktualnyPrzepis = theModel.getAktualnyPrzepis();
-            theView.wyswietlPrzepis(aktualnyPrzepis);
-        }
-        else if (key == KeyEvent.VK_ENTER) {
-            System.out.println("Naciśnięto ENTER!");
-            System.out.println("Wpisano: " + theView.getPoleWyszukiwania());
-
+        if (key == KeyEvent.VK_ENTER) {
             theModel.znajdzPrzepis(theView.getPoleWyszukiwania());
             aktualnyPrzepis = theModel.getAktualnyPrzepis();
             theView.wyswietlPrzepis(aktualnyPrzepis);

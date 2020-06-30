@@ -39,4 +39,44 @@ class KsiazkaKucharskaViewTest {
         theView.wyczyscPoleWyszukiwania();
         Assertions.assertEquals(theView.getPoleWyszukiwania(), "");
     }
+
+    @Test
+    void testGetTytul() {
+        KsiazkaKucharskaView theView = new KsiazkaKucharskaView();
+
+        Przepis przykladowyPrzepis = new Karpatka();
+        theView.wyswietlPrzepis(przykladowyPrzepis);
+        Assertions.assertEquals(theView.getTytul(), przykladowyPrzepis.getTytul());
+
+        przykladowyPrzepis = new MakaronZPesto();
+        theView.wyswietlPrzepis(przykladowyPrzepis);
+        Assertions.assertEquals(theView.getTytul(), przykladowyPrzepis.getTytul());
+    }
+
+    @Test
+    void testGetSkladniki() {
+        KsiazkaKucharskaView theView = new KsiazkaKucharskaView();
+
+        Przepis przykladowyPrzepis = new Karpatka();
+        theView.wyswietlPrzepis(przykladowyPrzepis);
+        Assertions.assertEquals(theView.getSkladniki(), przykladowyPrzepis.getSkladniki());
+
+        przykladowyPrzepis = new MakaronZPesto();
+        theView.wyswietlPrzepis(przykladowyPrzepis);
+        Assertions.assertEquals(theView.getSkladniki(), przykladowyPrzepis.getSkladniki());
+    }
+
+    @Test
+    void testGetInstrukcje() {
+        KsiazkaKucharskaView theView = new KsiazkaKucharskaView();
+
+        Przepis przykladowyPrzepis = new Karpatka();
+        theView.wyswietlPrzepis(przykladowyPrzepis);
+        Assertions.assertEquals(theView.getInstrukcje(), przykladowyPrzepis.getInstrukcje());
+
+        przykladowyPrzepis = new MakaronZPesto();
+        theView.wyswietlPrzepis(przykladowyPrzepis);
+        Assertions.assertEquals(theView.getInstrukcje(), przykladowyPrzepis.getInstrukcje());
+
+    }
 }

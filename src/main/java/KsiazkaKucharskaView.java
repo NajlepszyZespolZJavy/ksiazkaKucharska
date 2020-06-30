@@ -140,12 +140,12 @@ public class KsiazkaKucharskaView extends JFrame {
      * @param listener: słuchacz komponentów
      */
     public void addListeners(KsiazkaKucharskaController listener) {
+        poleWyszukiwania.addKeyListener(listener);
+        poleWyszukiwania.addFocusListener(listener);
         przyciskLewo.addActionListener(listener);
         przyciskLewo.addKeyListener(listener);
         przyciskPrawo.addActionListener(listener);
         przyciskPrawo.addKeyListener(listener);
-        poleWyszukiwania.addKeyListener(listener);
-        poleWyszukiwania.addFocusListener(listener);
     }
 
     /**

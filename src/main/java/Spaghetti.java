@@ -20,12 +20,12 @@ public class Spaghetti extends Przepis {
             "0.5 łyżeczki suszonego tymianku <br>" +
             "0.5 łyżeczki suszonego oregano";
     String instrukcje = "<html>Instrukcje:<br>" +
-            "1)Na głębokiej patelni rozgrzej około 2 łyżki oliwy z oliwek. <br>" +
-            "2)Na rozgrzaną patelnię wrzuć czosnek i cebulę, a po chwili dodaj mięso, rozdrabniaj je np. widelcem," +
+            "1) Na głębokiej patelni rozgrzej około 2 łyżki oliwy z oliwek. <br>" +
+            "2) Na rozgrzaną patelnię wrzuć czosnek i cebulę, a po chwili dodaj mięso, rozdrabniaj je np. widelcem," +
             " tak aby nie powstały grube mięsne grudki. <br>" +
-            "3)Do mięsa dodaj zioła oraz koncentrat. Całość podgrzewaj przez chwilę, dodaj passatę " +
+            "3) Do mięsa dodaj zioła oraz koncentrat. Całość podgrzewaj przez chwilę, dodaj passatę " +
             "(przecier pomidorowy), gotuj na małym ogniu około 30 minut. <br>" +
-            "4)Makaron ugotuj al dente, podawaj go z sosem, serem, i bazylią.";
+            "4) Makaron ugotuj al dente, podawaj go z sosem, serem, i bazylią.";
 
     protected String getTytul() { return tytul; }
     protected URL getSciezkaGrafiki() { return sciezkaGrafiki; }

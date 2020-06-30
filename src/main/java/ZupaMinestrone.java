@@ -20,7 +20,7 @@ public class ZupaMinestrone extends Przepis {
             "120 g makaronu";
     String instrukcje = "<html>Instrukcje:<br>" +
             "1) Do naczynia miksującego włożyć cebulę i por, rozdrobić.<br>" +
-            "2) Dodać oliwę, dusić 5 min.<br>." +
+            "2) Dodać oliwę, dusić 5 min.<br>" +
             "3) Dodać mieszane warzywa, rozdrbnić.<br>" +
             "4) Dodać wodę i koncentrat bulionu, gotować 15 min.<br>" +
             "5) Dodać sól i makaron, gotować zgodnie z czasem podanym na opakowaniu.";

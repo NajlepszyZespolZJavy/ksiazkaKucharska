@@ -26,11 +26,11 @@ public class Szarlotka extends Przepis {
             "rozpadną, w międzyczasie od czasu do czasu zamieszać.<br>" +
             "4) Piekarnik nagrzać do 180 stopni C. Przygotować tortownicę o średnicy 26 cm lub prostokątną " +
             "blaszkę ok. 20 x 30 cm.<br>" +
-            "5)Wyjąć jedną połówkę ciasta z lodówki, pokroić nożem na plasterki i wylepić nimi spód formy, " +
+            "5) Wyjąć jedną połówkę ciasta z lodówki, pokroić nożem na plasterki i wylepić nimi spód formy, " +
             "doklejając brakujące miejsca palcami.<br>" +
-            "6)Na spód wyłożyć jabłka. Wyjąć drugą część ciasta i zetrzeć na tarce bezpośrednio na jabłka " +
+            "6) Na spód wyłożyć jabłka. Wyjąć drugą część ciasta i zetrzeć na tarce bezpośrednio na jabłka " +
             "(lub pokroić ciasto na plasterki i ułożyć na wierzchu).<br>" +
-            "7)Wstawić do piekarnika i piec przez ok. 40 - 45 minut lub na złoty kolor. Posypać cukrem pudrem." +
+            "7) Wstawić do piekarnika i piec przez ok. 40 - 45 minut lub na złoty kolor. Posypać cukrem pudrem." +
             " Pokroić po ostudzeniu.";
 
     protected String getTytul() { return tytul; }
